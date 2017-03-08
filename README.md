@@ -7,6 +7,8 @@ Monitores: Não Definido
 
 Aulas: Terças e Quintas (17:00 - 18:40)
 
+Sala: 2014
+
 Aulas
 -----
 
