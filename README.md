@@ -1,9 +1,11 @@
-Sistemas Operacionais: 2017.1
-=============================
+DCC065 - Sistemas Operacionais: 2017.1
+======================================
 
 Professor: Flavio Figueiredo
 
 Monitores: Não Definido
+
+Aulas: Terças e Quintas (17:00 - 18:40)
 
 Aulas
 -----
