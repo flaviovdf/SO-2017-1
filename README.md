@@ -12,9 +12,7 @@ Sala: 2014
 Aulas
 -----
 
-Slides também podem ser encontrados no Google Drive.
-
-https://drive.google.com/drive/folders/0B0ryAvcYobs0c1oxSU9LaWdFbWs
+Slides também podem ser encontrados no [Google Drive](https://drive.google.com/drive/folders/0B0ryAvcYobs0c1oxSU9LaWdFbWs).
 
 **Plano de aulas inicial**
 
