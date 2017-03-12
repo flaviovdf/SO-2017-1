@@ -23,20 +23,21 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 5    | 22/03/17 | Processos + Threads       |                                                        |
 | 6    | 27/03/17 | Processos + Threads       |                                                        |
 | 7    | 29/03/17 | Boot e Interrupções       |                                                        |
-|      | 03/04/17 |                           | *Atividades Complementares, Sem Aula*                  |
+|      | 03/04/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 8    | 05/04/17 | Escalonamento             |                                                        |
 | 9    | 10/04/17 | Escalonamento             |                                                        |
 | 10   | 12/04/17 | Sincronização             |                                                        |
 | 11   | 17/04/17 | Sincronização             |                                                        |
 | 12   | 19/04/17 | Deadlocks                 |                                                        |
 | 13   | 24/04/17 | Deadlocks                 |                                                        |
-| 14   | 26/05/17 | *Dúvidas+Exercícios*      |                                                        |
-| 15   | 01/05/17 | *Prova 1*                 |                                                        |
-| 16   | 03/05/17 | Endereçamento             |                                                        |
-| 17   | 08/05/17 | Paginação                 |                                                        |
-| 18   | 10/05/17 | Paginação                 |                                                        |
-|      | 17/05/17 |                           | *Atividades Complementares, Sem Aula*                  |
-| 19   | 22/05/17 | Memória Virtual           |                                                        |
+| 14   | 26/04/17 | *Dúvidas+Exercícios*      |                                                        |
+|      | 01/05/17 |                           | *Feriado, dia do trabalho. Sem Aula*                   |
+| 15   | 03/05/17 | *Prova 1*                 |                                                        |
+| 16   | 08/05/17 | Endereçamento             |                                                        |
+| 17   | 10/05/17 | Paginação                 |                                                        |
+| 18   | 15/05/17 | Paginação                 |                                                        |
+| 19   | 17/05/17 | Memória Virtual           |                                                        |
+|      | 22/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 20   | 24/05/17 | Memória Virtual           |                                                        |
 | 21   | 29/05/17 | Memória Virtual           |                                                        |
 | 22   | 31/05/17 | Segmentação               |                                                        |
@@ -48,9 +49,6 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 28   | 21/06/17 | Sistemas Multi Core       |                                                        |
 | 29   | 26/06/17 | *Dúvidas+Exercícios*      |                                                        |
 | 30   | 28/06/17 | *Prova 2*                 |                                                        |
-| 31   | 03/07/17 | *Exame Suplementar*       |                                                        |
-|      | 05/07/17 |                           | *Sem Aula*                                             |
-| 32   | 10/07/17 | *Exame Final*             |                                                        |
 
 [00-Apresentação]: ./slides/00-Apresentacao.pdf
 [01-Introdução]: ./slides/01-Introducao.pdf
