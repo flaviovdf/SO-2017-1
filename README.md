@@ -23,7 +23,7 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 5    | 22/03/17 | Processos + Threads       |                                                        |
 | 6    | 27/03/17 | Processos + Threads       |                                                        |
 | 7    | 29/03/17 | Boot e Interrupções       |                                                        |
-|      | 03/04/17 | Atividades Complementares | *Sem Aula*                                             |
+|      | 03/04/17 |                           | *Atividades Complementares, Sem Aula*                  |
 | 8    | 05/04/17 | Escalonamento             |                                                        |
 | 9    | 10/04/17 | Escalonamento             |                                                        |
 | 10   | 12/04/17 | Sincronização             |                                                        |
@@ -35,7 +35,7 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 16   | 03/05/17 | Endereçamento             |                                                        |
 | 17   | 08/05/17 | Paginação                 |                                                        |
 | 18   | 10/05/17 | Paginação                 |                                                        |
-|      | 17/05/17 | Atividades Complementares | *Sem Aula*                                             |
+|      | 17/05/17 |                           | *Atividades Complementares, Sem Aula*                  |
 | 19   | 22/05/17 | Memória Virtual           |                                                        |
 | 20   | 24/05/17 | Memória Virtual           |                                                        |
 | 21   | 29/05/17 | Memória Virtual           |                                                        |
