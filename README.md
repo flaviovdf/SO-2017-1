@@ -1,5 +1,4 @@
-DCC065 - Sistemas Operacionais: 2017.1
-======================================
+# DCC065 - Sistemas Operacionais: 2017.1
 
 Professor: Flavio Figueiredo
 
@@ -9,8 +8,7 @@ Aulas: Terças e Quintas (17:00 - 18:40)
 
 Sala: 2014
 
-Aulas
------
+## Aulas
 
 Slides também podem ser encontrados no [Google Drive](https://drive.google.com/drive/folders/0B0ryAvcYobs0c1oxSU9LaWdFbWs).
 
@@ -54,7 +52,6 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [00-Apresentação]: ./slides/00-Apresentacao.pdf
 [01-Introdução]: ./slides/01-Introducao.pdf
 
-Material Interessante na Web
-----------------------------
+## Material Interessante na Web
 
-  1. http://pages.cs.wisc.edu/~remzi/OSTEP/
+  1. [OStep Bool](http://pages.cs.wisc.edu/~remzi/OSTEP/)
