@@ -8,6 +8,10 @@ Aulas: Terças e Quintas (17:00 - 18:40)
 
 Sala: 2014
 
+## TPs
+
+  1. [TP1][./TP1]
+
 ## Aulas
 
 Slides também podem ser encontrados no [Google Drive](https://drive.google.com/drive/folders/0B0ryAvcYobs0c1oxSU9LaWdFbWs).
