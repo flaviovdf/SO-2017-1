@@ -103,7 +103,7 @@ Dê uma olhada no manpage do /proc: [Manpage](http://man7.org/linux/man-pages/ma
 
 Outra fonte de dados é o código do ps: [PS](https://github.com/thlorenz/procps/blob/master/deps/procps/proc/readproc.c)
 
-Imprima a árvore de processos em usando tab como um separados. Novamente, lembre-se que o foco no TP não é gastar tempo em embelezamento de entrada e saída, e sim em testar e aprender system calls.
+Imprima a árvore de processos em usando tab como um separados. Novamente, lembre-se que o foco no TP não é gastar tempo em embelezamento de entrada e saída, e sim em testar e aprender sistemas operacionais.
 
 ```
 $ ./myps
