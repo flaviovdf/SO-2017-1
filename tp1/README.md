@@ -1,6 +1,8 @@
 TP1: Shell + PS (TOP) + Sinais
 ==============================
 
+Parte deste material foi adaptado do material do [Prof. Italo Cunha](http://dcc.ufmg.br/~cunha)
+
 Neste TP vamos explorar alguns conceitos da primeira parte da disciplina. Em particular, vamos rever os conceitos de Pipes, Estruturas de Processos do Kernel e Sinais.
 
 Parte 1: Desenvolvendo um Shell Básico
@@ -9,12 +11,12 @@ Parte 1: Desenvolvendo um Shell Básico
 Neste trabalho você se familiarizará com a interface de chamadas de sistema do Linux implementando algumas funcionalidades num shell simples. Para que você foque apenas na parte de chamadas de sistema, baixe o [esqueleto](https://gitlab.dcc.ufmg.br/cunha-dcc605/shell-assignment) do shell e o estude. O esqueleto do shell contém duas partes: um processador de linhas de comando e código para execução dos comandos. Você não precisa modificar o processador de linhas de comando (a não ser que queira implementar algumas das atividades extra abaixo), mas deve completar o código para execução dos comandos. O processador de linhas só reconhece comandos simples como:
 
 ```
-ls > y
-cat < y | sort | uniq | wc > y1
-cat y1
-rm y1
-ls | sort | uniq | wc
-rm y
+$ ls > y
+$ cat < y | sort | uniq | wc > y1
+$ cat y1
+$ rm y1
+$ ls | sort | uniq | wc
+$ rm y
 ```
 
 Se você não entende o que esses comandos fazem, estude o manual de um shell do Linux (por exemplo, do bash) bem como o manual de cada um dos comandos acima (ls, cat, rm, sort, uniq, wc) para se familiarizar. Copie e cole esses comandos num arquivo, por exemplo, teste.sh.
@@ -44,14 +46,14 @@ Executando comandos simples
 Implemente comandos simples, como:
 
 ```
-ls
+$ ls
 ```
 
 O processador de linhas já constrói uma estrutura execcmd para você, a única coisa que você precisa fazer é escrever o código do case ' ' (espaço) na função runcmd. Depois de escrever o código, teste execução de programas simples como:
 
 ```
-ls
-cat sh.c
+$ ls
+$ cat sh.c
 ```
 
 Nota: Você não precisa implementar o código do programa ls; você deve simplesmente implementar as funções no esqueleto do shell simplificado para permitir que ele execute comandos simples como acima.
@@ -76,7 +78,7 @@ Dica: Dê uma olhada no manual das funções open e close (man 2 open). Se você
 Implemente pipes para que você consiga rodar comandos tipo
 
 ```
-ls | sort | uniq | wc
+$ ls | sort | uniq | wc
 ```
 
 O processador de linhas já reconhece '|' e constrói uma estrutura pipecmd pra você. A única coisa que você precisa fazer é completar o código para o case '|' na função runcmd. Teste sua implementação para o comando acima. Se precisar, leia a documentação das funções pipe, fork e close.
@@ -101,7 +103,7 @@ Dê uma olhada no manpage do /proc: [Manpage](http://man7.org/linux/man-pages/ma
 
 Outra fonte de dados é o código do ps: [PS](https://github.com/thlorenz/procps/blob/master/deps/procps/proc/readproc.c)
 
-Imprima a árvore de processos em usando tab como um separados. Novamente, lembre-se que o foco no TP não é gastar tempo em embelezamento de entrada e saída, e sim em testar e aprender system calls.
+Imprima a árvore de processos em usando tab como um separados. Novamente, lembre-se que o foco no TP não é gastar tempo em embelezamento de entrada e saída, e sim em testar e aprender sistemas operacionais.
 
 ```
 $ ./myps
@@ -124,7 +126,14 @@ Parte 3: Uma TOP Simples (topzera)
 
 Vamos agora nos inspirar no comando `htop` para aprender um pouco mais sobre sinais. O htop é um top avançado no linux que permite o envio de sinais para processos em execução. Você pode usar o seu comado `myps` como base para o seu comando top.
 
-**Código de Teste:** Disponibilizei um código [signaltester]() para você testar o seu trabalho. O mesmo faz um tratamento simples de sinais em C. 
+**Código de Teste:** Disponibilizei um código [signaltester](https://github.com/flaviovdf/SO-2017-1/blob/master/tp1/signaltester/tester.c) para você testar o seu trabalho. O mesmo faz um tratamento simples de sinais em C. 
+
+Compile o teste com a linha
+
+```
+$ gcc signaltester.c -o signaltester
+```
+
 
 **Topzera**
 
@@ -139,13 +148,14 @@ PID    | User    | PROCNAME | Estado |
 1272   | root    | init     | S      |
 ```
 
+**Dica** Você pode limitar seu topzera para imprimir apenas os 20 primeiros processos que encontrar.
 
 Parte 4: Sinais
 ---------------
 
 Permita que seu comando TOP envie sinais. Isto é, crie uma função no seu TOP que enviar sinais para um PID. Tal função pode ser apenas digitar um "PID SINAL". Por exemplo, se o signaltester tem PID 2131, o código abaixo deve enviar o sinal SIGHUP para o mesmo.
 
-```bash
+```
 PID    | User    | PROCNAME     | Estado |
 -------|---------|--------------|--------|
 2131   | flavio  | signaltester | S      |
@@ -154,7 +164,16 @@ PID    | User    | PROCNAME     | Estado |
 
 Com este sinal o processo deve morrer e sair da sua lista.
 
+**Dica:** Possivelmente o signaltester não vai aparecer entre os 20 primeiros. Use o comando abaixo para descobrir o PID do 
+mesmo e testar seu topzera.
+
+```
+$ ps | grep signalteste
+```
+
 Parte 5: Criando um Módulo Linux funciona similar a um PS e PS-Tree
 -------------------------------------------------------------------
 
-Projeto de Programação do Chapt 1 e 2. Descrever aqui.
+Projeto de Programação 2 do Chapt 2 do Livro Sibershcatz. Descrever aqui.
+
+  1. https://en.wikipedia.org/wiki/Printk
