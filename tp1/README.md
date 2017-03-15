@@ -1,6 +1,8 @@
 TP1: Shell + PS (TOP) + Sinais
 ==============================
 
+Parte deste material foi adaptado do material do [Prof. Italo Cunha](http://dcc.ufmg.br/~cunha)
+
 Neste TP vamos explorar alguns conceitos da primeira parte da disciplina. Em particular, vamos rever os conceitos de Pipes, Estruturas de Processos do Kernel e Sinais.
 
 Parte 1: Desenvolvendo um Shell Básico
@@ -153,7 +155,7 @@ Parte 4: Sinais
 
 Permita que seu comando TOP envie sinais. Isto é, crie uma função no seu TOP que enviar sinais para um PID. Tal função pode ser apenas digitar um "PID SINAL". Por exemplo, se o signaltester tem PID 2131, o código abaixo deve enviar o sinal SIGHUP para o mesmo.
 
-```bash
+```
 PID    | User    | PROCNAME     | Estado |
 -------|---------|--------------|--------|
 2131   | flavio  | signaltester | S      |
@@ -172,4 +174,6 @@ $ ps | grep signalteste
 Parte 5: Criando um Módulo Linux funciona similar a um PS e PS-Tree
 -------------------------------------------------------------------
 
-Projeto de Programação do Chapt 1 e 2. Descrever aqui.
+Projeto de Programação 2 do Chapt 2 do Livro. Descrever aqui.
+
+  1. https://en.wikipedia.org/wiki/Printk
