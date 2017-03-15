@@ -174,6 +174,6 @@ $ ps | grep signalteste
 Parte 5: Criando um Módulo Linux funciona similar a um PS e PS-Tree
 -------------------------------------------------------------------
 
-Projeto de Programação 2 do Chapt 2 do Livro. Descrever aqui.
+Projeto de Programação 2 do Chapt 2 do Livro Sibershcatz. Descrever aqui.
 
   1. https://en.wikipedia.org/wiki/Printk
