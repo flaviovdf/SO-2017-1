@@ -10,7 +10,7 @@ Sala: 2014
 
 ## TPs
 
-  1. [TP1](./TP1)
+  1. [TP1](./tp1)
 
 ## Aulas
 
