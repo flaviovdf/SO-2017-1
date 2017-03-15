@@ -22,21 +22,21 @@ Se você não entende o que esses comandos fazem, estude o manual de um shell do
 Você pode compilar o esqueleto do shell rodando:
 
 ```
-$ gcc sh.c
+$ gcc sh.c -o myshell
 ```
 
 Nota: Nesta especificação colocamos um sinal de dólar antes das linhas que devem ser executadas no shell do sistema (por exemplo, o bash). As linhas de comando sem dólar devem ser executadas no shell simplificado que você está implementando.
 
-Esse comando irá produzir um arquivo a.out que você pode rodar:
+Esse comando irá produzir um arquivo `myshell` que você pode rodar:
 
 ```
-$ ./a.out
+$ ./myshell
 ```
 
 Para sair do shell simplificado aperte ctrl+d (fim de arquivo). Teste o shell executando os comandos no arquivo teste.sh:
 
 ```
-$ ./a.out < teste.sh
+$ ./myshell < teste.sh
 ```
 
 Essa execução irá falhar pois você ainda não implementou várias funcionalidades do shell. É isso que você fará nesse trabalho.
@@ -69,13 +69,23 @@ $ cat < x.txt
 
 O processador de linhas já reconhece ">" e "<" e constrói uma estrutura redircmd para você. Seu trabalho é apenas preencher o código na função runcmd para esses casos. Teste sua implementação com os comandos acima e outros comandos similares. 
 
-Dica: Dê uma olhada no manual das funções open e close (man 2 open). Se você não conhece o esquema de entrada e saída padrão de programas, dê uma olhada no artigo da Wikipedia aqui.
-Sequenciamento de comandos
+Dica: Dê uma olhada no manual das funções open e close (man 2 open). Se você não conhece o esquema de entrada e saída padrão de programas, dê uma olhada no artigo da Wikipedia [aqui](https://gitlab.dcc.ufmg.br/cunha-dcc605/shell-assignment).
+
+**Sequenciamento de comandos**
+
 Implemente pipes para que você consiga rodar comandos tipo
 
-```ls | sort | uniq | wc```
+```
+ls | sort | uniq | wc
+```
 
 O processador de linhas já reconhece '|' e constrói uma estrutura pipecmd pra você. A única coisa que você precisa fazer é completar o código para o case '|' na função runcmd. Teste sua implementação para o comando acima. Se precisar, leia a documentação das funções pipe, fork e close.
+
+  1. https://linux.die.net/man/2/fork
+  1. https://linux.die.net/man/3/exec
+  1. https://linux.die.net/man/2/pipe
+  1. https://linux.die.net/man/2/dup
+
 
 **Esclarecimentos**
 
@@ -91,16 +101,38 @@ Dê uma olhada no manpage do /proc: [Manpage](http://man7.org/linux/man-pages/ma
 
 Outra fonte de dados é o código do ps: [PS](https://github.com/thlorenz/procps/blob/master/deps/procps/proc/readproc.c)
 
-Imprima a árvore de processos da forma de achar melhor. Execute o comando `pstree` para ter uma noção de como uma árvore é impressa.
+Imprima a árvore de processos em usando tab como um separados. Novamente, lembre-se que o foco no TP não é gastar tempo em embelezamento de entrada e saída, e sim em testar e aprender system calls.
 
-Parte 3: Uma função TOP Simples
--------------------------------
+```
+$ ./myps
+init
+    child1
+        child11
+            child111
+        child12
+        child13
+    child2
+        child21
+            child211
+    child3
+```
 
-Modifique seu comando PS para o mesmo ser um laço que fica atualizando na tela os comandos que estão em execução. A forma de mostrar os programas na tela pode ser uma tabela simples. Além disso, quero apenas ver o PID do programa, o usuário, o nome do processo e o estado do mesmo. Não precisa implementar % de cpu e % de memória como um shell normal. A ordem da exibição também não é importante.
+**Dica:** Execute o comando `pstree` para ter uma noção de como uma árvore é impressa.
 
-Seu comando deve se chamar `mytop`.
+Parte 3: Uma TOP Simples (topzera)
+----------------------------------
 
-```bash
+Vamos agora nos inspirar no comando `htop` para aprender um pouco mais sobre sinais. O htop é um top avançado no linux que permite o envio de sinais para processos em execução. Você pode usar o seu comado `myps` como base para o seu comando top.
+
+**Código de Teste:** Disponibilizei um código [signaltester]() para você testar o seu trabalho. O mesmo faz um tratamento simples de sinais em C. 
+
+**Topzera**
+
+Modifique seu comando PS para imprimir os processos em sequência (remover os tabs). Além disto, altere o mesmo para identificar o PID do programa, o usuário que está executando o mesmo e o estado do processo. Com isto, imprima os programas em execução em uma tabela como a abaixo. Tal tabela deve ser atualizada a cada 1 segundo.
+
+Seu comando deve se chamar `topzera`.
+
+```
 PID    | User    | PROCNAME | Estado |
 -------|---------|----------|--------|
 1272   | flavio  | yes      | S      |
@@ -111,13 +143,16 @@ PID    | User    | PROCNAME | Estado |
 Parte 4: Sinais
 ---------------
 
-Permita que seu comando TOP receba sinais. Isto é, sobre-escreva o tratamento de sinais do mesmo para imprimir na tela o sinal recebido e depois tratar o sinal corretamente. Além disto, crie uma função no seu TOP que enviar sinais para um PID. Algo do tipo:
+Permita que seu comando TOP envie sinais. Isto é, crie uma função no seu TOP que enviar sinais para um PID. Tal função pode ser apenas digitar um "PID SINAL". Por exemplo, se o signaltester tem PID 2131, o código abaixo deve enviar o sinal SIGHUP para o mesmo.
 
 ```bash
-PID    | User    | PROCNAME |
--------|---------|----------|
-> send sig 9 pid
+PID    | User    | PROCNAME     | Estado |
+-------|---------|--------------|--------|
+2131   | flavio  | signaltester | S      |
+> 2131 1
 ```
+
+Com este sinal o processo deve morrer e sair da sua lista.
 
 Parte 5: Criando um Módulo Linux funciona similar a um PS e PS-Tree
 -------------------------------------------------------------------
