@@ -10,7 +10,7 @@ Sala: 2014
 
 ## TPs
 
-  1. [TP1](./tp1)
+  1. [TP1](https://github.com/flaviovdf/SO-2017-1/tree/master/tp1)
 
 ## Aulas
 
