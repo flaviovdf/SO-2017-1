@@ -11,12 +11,12 @@ Parte 1: Desenvolvendo um Shell Básico
 Neste trabalho você se familiarizará com a interface de chamadas de sistema do Linux implementando algumas funcionalidades num shell simples. Para que você foque apenas na parte de chamadas de sistema, baixe o [esqueleto](https://gitlab.dcc.ufmg.br/cunha-dcc605/shell-assignment) do shell e o estude. O esqueleto do shell contém duas partes: um processador de linhas de comando e código para execução dos comandos. Você não precisa modificar o processador de linhas de comando (a não ser que queira implementar algumas das atividades extra abaixo), mas deve completar o código para execução dos comandos. O processador de linhas só reconhece comandos simples como:
 
 ```
-ls > y
-cat < y | sort | uniq | wc > y1
-cat y1
-rm y1
-ls | sort | uniq | wc
-rm y
+$ ls > y
+$ cat < y | sort | uniq | wc > y1
+$ cat y1
+$ rm y1
+$ ls | sort | uniq | wc
+$ rm y
 ```
 
 Se você não entende o que esses comandos fazem, estude o manual de um shell do Linux (por exemplo, do bash) bem como o manual de cada um dos comandos acima (ls, cat, rm, sort, uniq, wc) para se familiarizar. Copie e cole esses comandos num arquivo, por exemplo, teste.sh.
@@ -46,14 +46,14 @@ Executando comandos simples
 Implemente comandos simples, como:
 
 ```
-ls
+$ ls
 ```
 
 O processador de linhas já constrói uma estrutura execcmd para você, a única coisa que você precisa fazer é escrever o código do case ' ' (espaço) na função runcmd. Depois de escrever o código, teste execução de programas simples como:
 
 ```
-ls
-cat sh.c
+$ ls
+$ cat sh.c
 ```
 
 Nota: Você não precisa implementar o código do programa ls; você deve simplesmente implementar as funções no esqueleto do shell simplificado para permitir que ele execute comandos simples como acima.
@@ -78,7 +78,7 @@ Dica: Dê uma olhada no manual das funções open e close (man 2 open). Se você
 Implemente pipes para que você consiga rodar comandos tipo
 
 ```
-ls | sort | uniq | wc
+$ ls | sort | uniq | wc
 ```
 
 O processador de linhas já reconhece '|' e constrói uma estrutura pipecmd pra você. A única coisa que você precisa fazer é completar o código para o case '|' na função runcmd. Teste sua implementação para o comando acima. Se precisar, leia a documentação das funções pipe, fork e close.
