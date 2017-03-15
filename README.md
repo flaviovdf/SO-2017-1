@@ -22,10 +22,10 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 |------|----------|---------------------------|--------------------------------------------------------|
 | 1    | 08/03/17 | Introdução                | [00-Apresentação], [01-Introdução]                     |
 | 2    | 13/03/17 | Introdução + Processos    | [02-Introdução], [03-Processos]                        |
-| 3    | 15/03/17 | Threads + Escalonamento   |                                                        |
+| 3    | 15/03/17 | Threads, TP1              | [04-Threads]                                           |
 | 4    | 20/03/17 | Escalonamento             |                                                        |
 | 5    | 22/03/17 | Escalonamento             |                                                        |
-| 6    | 27/03/17 | Processos + Threads       |                                                        |
+| 6    | 27/03/17 | Escalonamento             |                                                        |
 | 7    | 29/03/17 | Boot e Interrupções       |                                                        |
 |      | 03/04/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 8    | 05/04/17 | Sincronização             |                                                        |
@@ -62,7 +62,9 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [01-Introdução]: ./slides/01-Introducao.pdf
 [02-Introdução]: ./slides/02-Introducao.pdf
 [03-Processos]: ./slides/03-Processos.pdf
+[04-Threads]: ./slides/04-Threads.pdf
 
 ## Material Interessante na Web
 
   1. [OStep Bool](http://pages.cs.wisc.edu/~remzi/OSTEP/)
+  1. [XV6](https://github.com/mit-pdos/xv6-public)
