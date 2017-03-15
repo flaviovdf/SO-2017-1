@@ -124,7 +124,14 @@ Parte 3: Uma TOP Simples (topzera)
 
 Vamos agora nos inspirar no comando `htop` para aprender um pouco mais sobre sinais. O htop é um top avançado no linux que permite o envio de sinais para processos em execução. Você pode usar o seu comado `myps` como base para o seu comando top.
 
-**Código de Teste:** Disponibilizei um código [signaltester]() para você testar o seu trabalho. O mesmo faz um tratamento simples de sinais em C. 
+**Código de Teste:** Disponibilizei um código [signaltester](https://github.com/flaviovdf/SO-2017-1/blob/master/tp1/signaltester/tester.c) para você testar o seu trabalho. O mesmo faz um tratamento simples de sinais em C. 
+
+Compile o teste com a linha
+
+```
+$ gcc signaltester.c -o signaltester
+```
+
 
 **Topzera**
 
@@ -139,6 +146,7 @@ PID    | User    | PROCNAME | Estado |
 1272   | root    | init     | S      |
 ```
 
+**Dica** Você pode limitar seu topzera para imprimir apenas os 20 primeiros processos que encontrar.
 
 Parte 4: Sinais
 ---------------
@@ -153,6 +161,13 @@ PID    | User    | PROCNAME     | Estado |
 ```
 
 Com este sinal o processo deve morrer e sair da sua lista.
+
+**Dica:** Possivelmente o signaltester não vai aparecer entre os 20 primeiros. Use o comando abaixo para descobrir o PID do 
+mesmo e testar seu topzera.
+
+```
+$ ps | grep signalteste
+```
 
 Parte 5: Criando um Módulo Linux funciona similar a um PS e PS-Tree
 -------------------------------------------------------------------
