@@ -346,12 +346,11 @@ list_for_each(list, &init_task->children) {
 }
 ```
 
-  1. [Código exemplo](https://github.com/flaviovdf/SO-2017-1/blob/master/tp1/kernel/)
-  1. https://en.wikipedia.org/wiki/Printk
-
 A macro `list_for_each` recebe dois parâmetros, ambos do tipo `struct list_head`:
   1. Um ponteiro para onde vamos armazenar a cabeça da lista
   1. Um ponteiro para os filhos do init_task, vamos percorrer os mesmos
 
 A macro `list_entry` retorna cada elemento da lista.
-  
+
+  1. [Código exemplo](https://github.com/flaviovdf/SO-2017-1/blob/master/tp1/kernel/)
+  1. https://en.wikipedia.org/wiki/Printk
