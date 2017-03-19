@@ -14,7 +14,8 @@ ps_init(void)
   return 0;
 }
 
-void ps_exit(void)
+void
+ps_exit(void)
 {
   printk(KERN_INFO "Removing module myps\n");
 }
