@@ -9,7 +9,8 @@ simple_init(void)
   return 0;
 }
 
-void simple_exit(void)
+void
+simple_exit(void)
 {
   printk("UHUL!!!\n");
 }
