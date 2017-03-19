@@ -1,5 +1,5 @@
-TP1: Shell + PS (TOP) + Sinais
-==============================
+TP1: Shell + PS (TOP) + Sinais + Módulos
+========================================
 
   1. Entrega no mesmo dia da Primeira Prova
   1. Pode ser feito em dupla
