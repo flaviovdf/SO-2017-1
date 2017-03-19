@@ -1,6 +1,9 @@
 TP1: Shell + PS (TOP) + Sinais
 ==============================
 
+  1. Entrega no mesmo dia da Primeira Prova
+  1. Pode ser feito em dupla
+
 Parte deste material foi adaptado do material do [Prof. Italo Cunha](http://dcc.ufmg.br/~cunha)
 
 Neste TP vamos explorar alguns conceitos da primeira parte da disciplina. Em particular, vamos rever os conceitos de Pipes, Estruturas de Processos do Kernel e Sinais.
@@ -171,9 +174,175 @@ mesmo e testar seu topzera.
 $ ps | grep signalteste
 ```
 
-Parte 5: Criando um Módulo Linux funciona similar a um PS e PS-Tree
--------------------------------------------------------------------
+Parte 5: Criando um Módulo Linux que funciona similar ao PS-Tree
+----------------------------------------------------------------
 
-Projeto de Programação 2 do Chapt 2 do Livro Sibershcatz. Descrever aqui.
+O exercício abaixo é feito com base no Projeto de Programação 2 da 9a edição do livro do Siberschatz. Vamos criar um módulo que implementa o PS-Tree.
 
+**Listando módulos do kernel**
+
+Inicialmente vamos criar um módulo do kernel linux. No caminho, vamos aprender uma série de comandos úteis para lidar com módulo no mesmo. Alguns dos comandos abaixo só funcionarão no modo *root*, então usaremos o sudo:
+
+```
+$ sudo echo 'Sudo!'
+```
+
+Para listar módulos do kernel você pode utilizad o comando `lsmod`.
+
+```
+$ lsmod
+```
+
+Exemplo de saída:
+
+```
+$ lsmod
+Module                  Size  Used by
+bnep                   20480  2
+ip6table_filter        16384  0
+ip6_tables             28672  1 ip6table_filter
+iptable_filter         16384  0
+ip_tables              24576  1 iptable_filter
+```
+
+**Criando módulos do kernel**
+
+Além disto, você vai precisar dos headers do seu kernel. No ubuntu:
+
+```
+$ sudo apt-get install linux-headers-`uname -r`
+```
+
+O comando `uname -r` identifica a versão do ser kernel.
+
+O código abaixo é um módulo simples. Note que o mesmo faz uso de *printk* e não *printf*. No kernel, não conseguimos chamar funções da biblioteca padrão C.
+
+```c
+/*
+ * This code is based on the code provided by Operating Systems Concepts, 9th
+ * edition under a GPL license.
+ */
+#include <linux/init.h>
+#include <linux/kernel.h>
+#include <linux/module.h>
+
+int
+simple_init(void)
+{
+  printk("Loading module\n");
+  return 0;
+}
+
+void simple_exit(void)
+{
+  printk("Removing module\n");
+}
+
+module_init(simple_init);
+module_exit(simple_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Simple Module");
+```
+
+A forma mais simples de compilar o módulo acima é usando um Makefile como o exemplo abaixo:
+
+```make
+obj-m := simple.o
+KDIR := /lib/modules/$(shell uname -r)/build
+PWD := $(shell pwd)
+
+default:
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+
+clean:
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) clean
+```
+
+Coloque o `Makefile` junto com o seu código e digite:
+
+```
+$ make
+```
+
+Com isto você compilou o seu módulo. Agora você deve ter os seguintes arquivos
+
+```
+$ ls
+ls
+Makefile       Module.symvers  simple.ko     simple.mod.o
+modules.order  simple.c        simple.mod.c  simple.o
+```
+
+Seu módulo é o `simple.ko`. Insira ele no kernel com o comando:
+
+```
+$ sudo insmod simple.ko
+```
+
+Execute o dmesg e verifique se o módulo foi carregado
+
+```
+$ dmesg
+```
+
+Sua mensagem de init deve ser a última, ou uma das últimas.
+
+Remova o módulo com
+
+```
+$ sudo rmmod simple
+```
+
+Verifique que o mesmo foi removido com dmesg novamente.
+
+**PS-Tree Módulo**
+
+Agora vamos olhar as estrtuturas de processos no kernel do linux. O código abaixo faz uso do [sched.h](https://github.com/torvalds/linux/blob/master/include/linux/sched.h). O mesmo simplesmente imprime todas as tarefas em execução no momento.
+
+Preste atenção:
+  1. Leia o [sched.h](https://github.com/torvalds/linux/blob/master/include/linux/sched.h)
+  2. Note que a iteração é feita com uma macro `for_each_process(task)`
+
+```c
+#include <linux/init.h>
+#include <linux/kernel.h>
+#include <linux/sched.h>
+#include <linux/module.h>
+
+int
+ps_init(void)
+{
+  struct task_struct *task;
+  printk(KERN_INFO "Loading module myps\n");
+  for_each_process(task) {
+    printk("Name: %s PID: [%d]\n", task->comm, task->pid);
+  }
+  return 0;
+}
+
+void ps_exit(void)
+{
+  printk(KERN_INFO "Removing module myps\n");
+}
+
+module_init(ps_init);
+module_exit(ps_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("PS Module");
+```
+
+Usando as macros abaixo tente criar o PSTree:
+
+```c
+struct task_struct *task;
+struct list_head *list;
+list_for_each(list, &init_task->children) {
+  task = list_entry(list, struct task_struct, sibling);
+  /* task points to the next child in the list */
+}
+```
+
+  1. [Código exemplo](https://github.com/flaviovdf/SO-2017-1/blob/master/tp1/kernel/)
   1. https://en.wikipedia.org/wiki/Printk
