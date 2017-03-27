@@ -24,8 +24,8 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 2    | 13/03/17 | Introdução + Processos    | [02-Introdução], [03-Processos]                        |
 | 3    | 15/03/17 | Threads, TP1              | [04-Threads]                                           |
 | 4    | 20/03/17 | Escalonamento             | [05-Escalonamento]                                     |
-| 5    | 22/03/17 | Escalonamento             |                                                        |
-| 6    | 27/03/17 | Escalonamento             |                                                        |
+| 5    | 22/03/17 |                           | *Sem aula. Coquetel DCC*                               |
+| 6    | 27/03/17 | Escalonamento             | [06-Escalonamento]                                     |
 | 7    | 29/03/17 | Boot e Interrupções       |                                                        |
 |      | 03/04/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 8    | 05/04/17 | Sincronização             |                                                        |
@@ -69,5 +69,4 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [03-Processos]: ./slides/03-Processos.pdf
 [04-Threads]: ./slides/04-Threads.pdf
 [05-Escalonamento]: ./slides/05-Escalonamento.pdf
-
-
+[06-Escalonamento]: ./slides/06-Escalonamento2.pdf
