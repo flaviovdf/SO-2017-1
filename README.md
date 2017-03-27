@@ -8,6 +8,8 @@ Aulas: Terças e Quintas (17:00 - 18:40)
 
 Sala: 2014
 
+[Frequência:](https://docs.google.com/spreadsheets/d/1HLKp8ExZbFL5IFhegWG0cHBfpHrkYq0c07fOMNdCDbA)
+
 ## TPs
 
   1. [TP1](https://github.com/flaviovdf/SO-2017-1/tree/master/tp1)
