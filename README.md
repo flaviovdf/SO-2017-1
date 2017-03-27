@@ -28,7 +28,7 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 4    | 20/03/17 | Escalonamento             | [05-Escalonamento]                                     |
 | 5    | 22/03/17 |                           | *Sem aula. Coquetel DCC*                               |
 | 6    | 27/03/17 | Escalonamento             | [06-Escalonamento]                                     |
-| 7    | 29/03/17 | Boot e Interrupções       |                                                        |
+| 7    | 29/03/17 | Dicussão TP, Problemas    |                                                        |
 |      | 03/04/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 8    | 05/04/17 | Sincronização             |                                                        |
 | 9    | 10/04/17 | Sincronização             |                                                        |
