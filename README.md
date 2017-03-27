@@ -8,7 +8,7 @@ Aulas: Terças e Quintas (17:00 - 18:40)
 
 Sala: 2014
 
-[Frequência:](https://docs.google.com/spreadsheets/d/1HLKp8ExZbFL5IFhegWG0cHBfpHrkYq0c07fOMNdCDbA)
+[Frequência](https://docs.google.com/spreadsheets/d/1HLKp8ExZbFL5IFhegWG0cHBfpHrkYq0c07fOMNdCDbA)
 
 ## TPs
 
