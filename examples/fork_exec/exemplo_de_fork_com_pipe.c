@@ -1,7 +1,8 @@
 #include <errno.h> 
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
 extern char **environ; //Environment variables de uinstd.h
@@ -30,8 +31,8 @@ main(void) {
         //Já fiz o clone do READ_END para o STDIN. Próximo processo apenas lê o mesmo
         close(fd[WRITE_END]); 
         close(fd[READ_END]);
-        char *argv[] = {"wc", NULL}; //O primeiro argumento de um programa é o nome do mesmo
-        if (execvp("wc", argv) < 0) {
+        char *argv[] = {"python", "meu_script.py", NULL}; //O primeiro argumento de um programa é o nome do mesmo
+        if (execvp("python", argv) < 0) {
             perror("Bad Exec");
             exit(1);
         }
@@ -44,7 +45,16 @@ main(void) {
         fprintf(fp, "%s\n", "Minha terra tem palmeiras");
         fprintf(fp, "%s\n", "Onde canta o sabiá");
         fprintf(fp, "%s\n", "<3 SOs");
+        
+        //Lembre-se de fechar os arquivos. Espere o filho terminar depois
+        //apenas
         fclose(fp);
         close(fd[WRITE_END]);
+        
+        //Esperar o processo filho finalizar
+        int status;
+        waitpid(pidChild, &status, 0);
+        
+        printf("Filho terminou com status X %d\n", status);
     }
 }
