@@ -5,7 +5,9 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-extern char **environ; //Environment variables de uinstd.h
+//Environment variables de uinstd.h. Não precisamos utilizar no
+//exemplo abaixo. Sinalizando onde achar as mesmas.
+extern char **environ;
 
 #define READ_END 0
 #define WRITE_END 1
@@ -26,12 +28,18 @@ main(void) {
     }
 
     if (pidChild == 0) { //Sou o processo filho
-        dup2(fd[READ_END], STDIN_FILENO); //clona o read do pipe do stdin para o processo do execvp
+        //clona o read do pipe do stdin para o processo do execvp
+        dup2(fd[READ_END], STDIN_FILENO);
         
-        //Já fiz o clone do READ_END para o STDIN. Próximo processo apenas lê o mesmo
-        close(fd[WRITE_END]); 
+        //Já fiz o clone do READ_END para o STDIN.
+        //Próximo processo apenas lê o mesmo
+        close(fd[WRITE_END]);
         close(fd[READ_END]);
-        char *argv[] = {"python", "meu_script.py", NULL}; //O primeiro argumento de um programa é o nome do mesmo
+        
+        //O primeiro argumento de um programa é o nome do mesmo
+        char *argv[] = {"python", "meu_script.py", NULL};
+        
+        //Você também pode fazer execvp(argv[0], argv);
         if (execvp("python", argv) < 0) {
             perror("Bad Exec");
             exit(1);
@@ -46,8 +54,8 @@ main(void) {
         fprintf(fp, "%s\n", "Onde canta o sabiá");
         fprintf(fp, "%s\n", "<3 SOs");
         
-        //Lembre-se de fechar os arquivos. Espere o filho terminar depois
-        //apenas
+        //Lembre-se de fechar os arquivos.
+        //Espere o filho terminar depois apenas
         fclose(fp);
         close(fd[WRITE_END]);
         
@@ -55,6 +63,6 @@ main(void) {
         int status;
         waitpid(pidChild, &status, 0);
         
-        printf("Filho terminou com status X %d\n", status);
+        printf("Filho terminou com status %d\n", status);
     }
 }
