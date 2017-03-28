@@ -26,38 +26,38 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 2    | 13/03/17 | Introdução + Processos    | [02-Introdução], [03-Processos]                        |
 | 3    | 15/03/17 | Threads, TP1              | [04-Threads]                                           |
 | 4    | 20/03/17 | Escalonamento             | [05-Escalonamento]                                     |
-| 5    | 22/03/17 |                           | *Sem aula. Coquetel DCC*                               |
-| 6    | 27/03/17 | Escalonamento             | [06-Escalonamento]                                     |
-| 7    | 29/03/17 | Boot e Interrupções       |                                                        |
+|      | 22/03/17 |                           | *Sem aula. Coquetel DCC*                               |
+| 5    | 27/03/17 | Escalonamento             | [06-Escalonamento]                                     |
+| 6    | 29/03/17 | Dicussão TP, Problemas    |                                                        |
 |      | 03/04/17 |                           | *Atividades Complementares. Sem Aula*                  |
-| 8    | 05/04/17 | Sincronização             |                                                        |
-| 9    | 10/04/17 | Sincronização             |                                                        |
-| 10   | 12/04/17 | Deadlocks                 |                                                        |
-| 11   | 17/04/17 | Deadlocks                 |                                                        |
-| 12   | 19/04/17 | Memória Virtual           |                                                        |
-| 13   | 24/04/17 | Memória Virtual           |                                                        |
-| 14   | 26/04/17 | *Dúvidas+Exercícios*      |                                                        |
+| 7    | 05/04/17 | Sincronização             |                                                        |
+| 8    | 10/04/17 | Sincronização             |                                                        |
+| 9    | 12/04/17 | Deadlocks                 |                                                        |
+| 10   | 17/04/17 | Deadlocks                 |                                                        |
+| 11   | 19/04/17 | Memória Virtual           |                                                        |
+| 12   | 24/04/17 | Memória Virtual           |                                                        |
+| 13   | 26/04/17 | *Dúvidas+Exercícios*      |                                                        |
 |      | 01/05/17 |                           | *Feriado, dia do trabalho. Sem Aula*                   |
-| 15   | 03/05/17 | *Prova 1*                 |                                                        |
-| 16   | 08/05/17 | Correção da Prova         |                                                        |
+| 14   | 03/05/17 | *Prova 1*                 |                                                        |
+| 15   | 08/05/17 | Correção da Prova         |                                                        |
 
 | Aula | Data     |  Prova 2                  | Informações                                            |
 |------|----------|---------------------------|--------------------------------------------------------|
-| 17   | 10/05/17 | Tabelas de Página         |                                                        |
-| 18   | 15/05/17 | Paginação                 |                                                        |
-| 19   | 17/05/17 | Paginação                 |                                                        |
+| 16   | 10/05/17 | Tabelas de Página         |                                                        |
+| 17   | 15/05/17 | Paginação                 |                                                        |
+| 18   | 17/05/17 | Paginação                 |                                                        |
 |      | 22/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
-| 20   | 24/05/17 | Segmentação               |                                                        |
-| 21   | 29/05/17 | Entrada e Saída           |                                                        |
-| 22   | 31/05/17 | Entrada e Saída           |                                                        |
-| 23   | 05/06/17 | Arquivos                  |                                                        |
-| 24   | 07/06/17 | Arquivos                  |                                                        |
-| 25   | 12/06/17 | Proteção                  |                                                        |
-| 26   | 14/06/17 | Segurança                 |                                                        |
-| 27   | 19/06/17 | Sistemas Multi Core       |                                                        |
-| 28   | 21/06/17 | *Dúvidas+Exercícios*      |                                                        |
-| 29   | 26/06/17 | *Prova 2*                 |                                                        |
-| 30   | 28/07/17 | Correção da Prova         |                                                        |
+| 19   | 24/05/17 | Segmentação               |                                                        |
+| 20   | 29/05/17 | Entrada e Saída           |                                                        |
+| 21   | 31/05/17 | Entrada e Saída           |                                                        |
+| 22   | 05/06/17 | Arquivos                  |                                                        |
+| 23   | 07/06/17 | Arquivos                  |                                                        |
+| 24   | 12/06/17 | Proteção                  |                                                        |
+| 25   | 14/06/17 | Segurança                 |                                                        |
+| 26   | 19/06/17 | Sistemas Multi Core       |                                                        |
+| 27   | 21/06/17 | *Dúvidas+Exercícios*      |                                                        |
+| 28   | 26/06/17 | *Prova 2*                 |                                                        |
+| 29   | 28/07/17 | Correção da Prova         |                                                        |
 
 
 ## Material Interessante na Web
