@@ -30,7 +30,7 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 5    | 27/03/17 | Escalonamento             | [06-Escalonamento]                                     |
 | 6    | 29/03/17 | Sincronização, Discussões | [07-Sincronizacao], [TP1-ForkExec], [Revisao01]        |
 |      | 03/04/17 |                           | *Atividades Complementares. Sem Aula*                  |
-| 7    | 05/04/17 | Sincronização             |                                                        |
+| 7    | 05/04/17 | Sincronização             | [07-Exemplos]                                          |
 | 8    | 10/04/17 | Sincronização             |                                                        |
 | 9    | 12/04/17 | Deadlocks                 |                                                        |
 | 10   | 17/04/17 | Deadlocks                 |                                                        |
@@ -75,3 +75,4 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [07-Sincronizacao]: ./slides/07-Sincronizacao.pdf
 [Revisao01]: ./slides/06b-RevisaoProcessosEscalonamento.pdf
 [TP1-ForkExec]: https://github.com/flaviovdf/SO-2017-1/blob/master/examples/fork_exec/exemplo_de_fork_com_pipe.c
+[07-Exemplos]: https://github.com/flaviovdf/SO-2017-1/blob/master/examples/problemssync/

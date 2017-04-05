@@ -45,6 +45,10 @@ public class Fork {
       this.lock.unlock();
     }
   }
+  
+  public int getID() {
+    return this.id;
+  }
 
   public String toString() {
     return "" + this.id;

@@ -4,6 +4,7 @@ all:
 	javac Philosopher.java
 	javac LeftFirst.java
 	javac RandomFork.java
+	javac MinFirst.java
 
 clean:
 	-rm *.class

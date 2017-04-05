@@ -14,6 +14,7 @@ extern char **environ;
 
 int
 main(void) {
+    char *texto = "adss";
     //Armazena o pid=0 no processo filho. -1 quando temos um erro
     int pidChild; 
     
