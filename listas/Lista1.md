@@ -89,9 +89,9 @@
    Isto é, uma parte dos processos vão coletar páginas da internet, outra parte
    vai servir as páginas para clientes via Web, enquanto a última parte vai
    cuidar de processar e indexar as páginas. Como pode ser visto, alguns
-   processos tem mais uso de I/O enquanto outros são mais CPU intensive. Como
+   processos têm mais uso de I/O enquanto outros são mais CPU intensive. Como
    você criaria filas de prioridades para estes processos? Quais algoritmos de
-   escalonamento você utilizaria dentro das filas? Você achar que é necessária
+   escalonamento você utilizaria dentro das filas? Você acha que é necessário
    chavear processos entre filas?
 
 ## Sincronização e Deadlocks
