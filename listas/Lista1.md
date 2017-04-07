@@ -1,6 +1,8 @@
-Universidade Federal de Minas Gerais
-Disciplina: DCC065 - Sistemas Operacionais
-Professor: Flavio Vinicius Diniz de Figueiredo
+**Universidade Federal de Minas Gerais**
+
+**Disciplina: DCC065 - Sistemas Operacionais**
+
+**Professor: Flavio Vinicius Diniz de Figueiredo**
 
 # Lista de Exercícios - Prova 1
 
