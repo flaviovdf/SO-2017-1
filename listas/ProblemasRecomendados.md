@@ -25,7 +25,3 @@ Processos
      6.39.
   1. Capítulo 7: 7.3, 7.6, 7.7, 7.9, 7.10, 7.11, 7.12, 7.14, 7.15, 7.17, 7.20,
      7.22 e 7.23.
-
-## Livro Tanenbaum (Sistemas Operacionais Modernos)
-
-**5a Edição**
