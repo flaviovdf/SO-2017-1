@@ -33,9 +33,9 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 5    | 27/03/17 | Escalonamento             | [06-Escalonamento]                                     |
 | 6    | 29/03/17 | Sincronização, Discussões | [07-Sincronizacao], [TP1-ForkExec]                     |
 |      | 03/04/17 |                           | *Atividades Complementares. Sem Aula*                  |
-| 7    | 05/04/17 | Sincronização             | [07-Exemplos]                                          |
-| 8    | 10/04/17 | Sincronização             |                                                        |
-| 9    | 12/04/17 | Deadlocks                 |                                                        |
+| 7    | 05/04/17 | Sincronização             |                                                        |
+| 8    | 10/04/17 | Sincronização             | [07-Exemplos]                                          |
+| 9    | 12/04/17 | Deadlocks                 | [08-Deadlocks]                                         |
 | 10   | 17/04/17 | Deadlocks                 |                                                        |
 | 11   | 19/04/17 | Memória Virtual           |                                                        |
 | 12   | 24/04/17 | Memória Virtual           |                                                        |
@@ -80,3 +80,4 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [07-Exemplos]: https://github.com/flaviovdf/SO-2017-1/blob/master/examples/problemssync/
 [ProblemasRecomendados]: https://github.com/flaviovdf/SO-2017-1/blob/master/listas/ProblemasRecomendados.md
 [Lista01]: https://github.com/flaviovdf/SO-2017-1/blob/master/listas/Lista1.md
+[08-Deadlocks]: ./slides/08-Deadlocks.pdf
