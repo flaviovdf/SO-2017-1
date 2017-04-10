@@ -72,10 +72,10 @@ public class Philosopher implements Runnable {
     for (int i = 0; i < n; i++) {
       if (i == 0)
         philosophers.add(new Philosopher(i, forks.get(n-1), forks.get(i), 
-            new LeftFirst()));
+            new MinFirst()));
       else
         philosophers.add(new Philosopher(i, forks.get(i-1), forks.get(i),
-            new LeftFirst()));
+            new MinFirst()));
     }
   
     for (int i = 0; i < n; i++) {
