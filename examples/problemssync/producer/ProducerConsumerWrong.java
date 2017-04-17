@@ -8,7 +8,8 @@ public class ProducerConsumerWrong {
 
   //true == fifo == fair
   private static final Semaphore available = new Semaphore(N, true);
-  //ERRO1: Semaforo 0 em java não sincroniza (UP adiciona + 1 sempre)! Ler API!!!!
+  //ERRO1: Semaforo 0 em java não sincroniza no UP
+  //(UP adiciona + 1 sempre)! Ler API!!!!
   private static final Semaphore sync = new Semaphore(0);
   private static final List<Object> queue = new ArrayList<>();
 
