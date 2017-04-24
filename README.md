@@ -36,28 +36,30 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 7    | 05/04/17 | Sincronização             |                                                        |
 | 8    | 10/04/17 | Sincronização             | [07-Exemplos]                                          |
 | 9    | 12/04/17 | Deadlocks                 | [08-Deadlocks]                                         |
-| 10   | 17/04/17 | Deadlocks                 |                                                        |
-| 11   | 19/04/17 | Memória Virtual           |                                                        |
-| 12   | 24/04/17 | Memória Virtual           |                                                        |
-| 13   | 26/04/17 | *Dúvidas+Exercícios*      |                                                        |
+| 13   | 26/04/17 | *Dúvidas+Exercícios*      | [TP2-??]                                               |
 |      | 01/05/17 |                           | *Feriado, dia do trabalho. Sem Aula*                   |
 | 14   | 03/05/17 | *Prova 1*                 |                                                        |
 | 15   | 08/05/17 | Correção da Prova         |                                                        |
 
 | Aula | Data     |  Prova 2                  | Informações                                            |
 |------|----------|---------------------------|--------------------------------------------------------|
+| 10   | 17/04/17 | Gerência de Memória       | [09-Gerencia]                                          |
+| 11   | 19/04/17 | Segmentação + Paginação   | [10-SegmentacaoPaginacao]                              |
+| 12   | 24/04/17 | Boot + Paginação XV6      | [11-BootXV6]                                           |
+|      | 26/04/17 |                           | Ver tabela anterior                                    |
+|      | 03/05/17 |                           | Ver tabela anterior                                    |
 | 16   | 10/05/17 | Tabelas de Página         |                                                        |
-| 17   | 15/05/17 | Paginação                 |                                                        |
-| 18   | 17/05/17 | Paginação                 |                                                        |
+| 17   | 15/05/17 | Memória Virtual           |                                                        |
+| 18   | 17/05/17 | Memória Virtual           |                                                        |
 |      | 22/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
-| 19   | 24/05/17 | Segmentação               |                                                        |
+| 19   | 24/05/17 | Entrada e Saída           |                                                        |
 | 20   | 29/05/17 | Entrada e Saída           |                                                        |
 | 21   | 31/05/17 | Entrada e Saída           |                                                        |
 | 22   | 05/06/17 | Arquivos                  |                                                        |
 | 23   | 07/06/17 | Arquivos                  |                                                        |
 | 24   | 12/06/17 | Proteção                  |                                                        |
 | 25   | 14/06/17 | Segurança                 |                                                        |
-| 26   | 19/06/17 | Sistemas Multi Core       |                                                        |
+| 26   | 19/06/17 | Virtualização             |                                                        |
 | 27   | 21/06/17 | *Dúvidas+Exercícios*      |                                                        |
 | 28   | 26/06/17 | *Prova 2*                 |                                                        |
 | 29   | 28/07/17 | Correção da Prova         |                                                        |
@@ -81,3 +83,6 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [ProblemasRecomendados]: https://github.com/flaviovdf/SO-2017-1/blob/master/listas/ProblemasRecomendados.md
 [Lista01]: https://github.com/flaviovdf/SO-2017-1/blob/master/listas/Lista1.md
 [08-Deadlocks]: ./slides/08-Deadlocks.pdf
+[09-Gerencia]: ./slides/09-Memoria.pdf
+[10-SegmentacaoPaginacao]: ./slides/10-SegmentacaoPaginacao.pdf
+[11-BootXV6]: ./slides/11-Boot.pdf
