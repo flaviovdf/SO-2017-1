@@ -61,3 +61,7 @@ A ser disponibilizado
 ## Plotando Resultados
 
 A ser disponibilizado
+
+## Recursos Interessantes
+
+  * http://www.ntu.edu.sg/home/smitha/ParaCache/Paracache/vm.html
