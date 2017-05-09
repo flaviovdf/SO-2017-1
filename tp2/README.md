@@ -125,7 +125,7 @@ mmap(init, len, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
 Você pode fazer uso da função `sbrk` para definir o primeiro endereço de
 memória:
 
-```
+```c
 void *init = sbrk(0);
 ```
 
