@@ -13,6 +13,7 @@ Sala: 2014
 ## TPs
 
   1. [TP1](https://github.com/flaviovdf/SO-2017-1/tree/master/tp1)
+  2. [TP2](https://github.com/flaviovdf/SO-2017-1/tree/master/tp2)
 
 ## Aulas
 
@@ -36,10 +37,10 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 7    | 05/04/17 | Sincronização             |                                                        |
 | 8    | 10/04/17 | Sincronização             | [07-Exemplos]                                          |
 | 9    | 12/04/17 | Deadlocks                 | [08-Deadlocks]                                         |
-| 13   | 26/04/17 | *Dúvidas+Exercícios*      | [TP2-??]                                               |
+| 13   | 26/04/17 | *Dúvidas+Exercícios*      |                                                        |
 |      | 01/05/17 |                           | *Feriado, dia do trabalho. Sem Aula*                   |
 | 14   | 03/05/17 | *Prova 1*                 |                                                        |
-| 15   | 08/05/17 | Correção da Prova         |                                                        |
+| 15   | 08/05/17 | Correção da Prova         | [TP2]                                                  |
 
 | Aula | Data     |  Prova 2                  | Informações                                            |
 |------|----------|---------------------------|--------------------------------------------------------|
@@ -47,7 +48,7 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 11   | 19/04/17 | Segmentação + Paginação   | [10-SegmentacaoPaginacao]                              |
 | 12   | 24/04/17 | Boot + Paginação XV6      | [11-BootXV6]                                           |
 |      | 26/04/17 |                           | Ver tabela anterior                                    |
-|      | 03/05/17 |                           | Ver tabela anterior                                    |
+|      | 03/05/17 |                           | [TP2]                                                  |
 | 16   | 10/05/17 | Tabelas de Página         |                                                        |
 | 17   | 15/05/17 | Memória Virtual           |                                                        |
 | 18   | 17/05/17 | Memória Virtual           |                                                        |
@@ -86,3 +87,4 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [09-Gerencia]: ./slides/09-Memoria.pdf
 [10-SegmentacaoPaginacao]: ./slides/10-SegmentacaoPaginacao.pdf
 [11-BootXV6]: ./slides/11-Boot.pdf
+[TP2]: ./tp2/
