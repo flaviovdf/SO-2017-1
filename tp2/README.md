@@ -84,7 +84,7 @@ Funções a serem implementadas:
 #ifndef SO605_GC
 #define SO605_GC
 
-define MEMSIZE = 4096            # Processo tem 4096 MB de memória
+define MEMSIZE = 4096            //Processo tem 4096 MB de memória
 
 //Nó da lista de memória livre
 typedef struct mem_node {
