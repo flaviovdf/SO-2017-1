@@ -70,7 +70,11 @@ A ser disponibilizado
 
   * http://www.ntu.edu.sg/home/smitha/ParaCache/Paracache/vm.html
 
-## Parte 2: Malloc!
+### Nome do Executável Final
+
+`vmm`
+
+## Parte 2: AhLoka!
 
 ### Descrição
 
@@ -98,7 +102,7 @@ typedef struct mem_node {
 typedef *mem_node_t mem_free_t;
 
 void *aloca(size_t size);
-void libera(void *prt);
+void libera(void *ptr);
 
 #endif
 ```
@@ -138,22 +142,28 @@ são identificados de acordo com os ids anteriores:
 | ID   | Mem Size | Op  |
 |------|----------|-----|
 | bf   |          |     |
-| 1    | 512      | a   |
-| 2    | 128      | a   |
-| 1    |          | f   |
+| nops |          |     |
+| 0    | 512      | a   |
+| 1    | 128      | a   |
+| 2    |          | f   |
 | ...  | ...      | ... |
 
 A primeira linha indica o esquema de alocação a ser utilizado. Você deve
 implementar:
 
-  1. Best fit
-  2. Worst fit
-  3. First fit
-  4. Next fit
+  1. Best fit (bf)
+  2. Worst fit (wf)
+  3. First fit (ff)
+  4. Next fit (nf)
+  
+A segunda linha indica o número de operações que serão realizadas, assim
+você pode gerenciar os ids das operações. Tal linha é um int. Os ids são
+de [0, nops).
 
-A entrada acima aloca 2 regiões de memória, uma de 512bytes e outra de
-128bytes. Após isto, a mesma libera 512bytes da região 1. As entradas
-vão ser lidas de `stdin`.
+Por fim, entrada acima aloca 2 regiões de memória, uma de 512bytes e outra
+de 128bytes. Após as alocações, a mesma libera 512bytes da região 1. 
+
+As entradas vão ser lidas de `stdin`.
 
 ### Saída
 
@@ -179,4 +189,79 @@ A ser disponibilizado
 
   1. http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf
 
-## Parte 3 (Extra): Garbage Collection
+### Nome do Executável Final
+
+`aloca`
+
+## Parte 3: Garbage Collection
+
+Implemente um coletor de memória simples por contagem de referências.
+Não se preocupe com referências cíclicas, não vamos ter casos como esse.
+Para implementar o GC, você vai ler uma entrada similar a anterior. A mesma
+terá operações novas de dependencias entre ids de alocação (imagine como
+referências entre objetos em C++/Java/Python).
+
+  1. Cada `aloca` cria uma nova referência para o id.
+  2. Cada dependencia entre 2 ids cria uma nova referência para o destino
+
+### Entrada
+
+| ID   | Mem Size | Op  |
+|------|----------|-----|
+| bf   |          |     |
+| nops |          |     |
+| 0    | 512      | a   |
+| 1    | 128      | a   |
+| 2    |          | f   |
+| 3    | 0        | r   |
+| 4    | 3        | r   |
+| 4    |          | f   |
+| ...  | ...      | ... |
+
+As operações de referência são identificadas por `r`.
+
+### Funcionamento
+
+Cada free deve liberar o espaço de memória e reduzir por 1 as
+referências. Quando qualquer espaço tem tamanho 0, seu GC pode
+liberar aquele espaço também.
+
+No exemplo acima, liberamos o id (ponteiro) 4. O mesmo tinha
+uma referência para 3. Note que 3 nunca foi alocado por `a`,
+então neste momento seu contador é 0. O mesmo pode ser liberado.
+
+### Saída
+
+   1. **Assuma que operações r tem uma custo de 4bytes, criar um ponteiro**
+   2. Indique a quantidade de bytes ainda residentes na memória no fim do
+      do seu programa.
+      
+Ex: `128`
+
+### Dicas
+
+Embora não seja necessário para ter um TP correto, você pode imaginar que
+seu GC vai ser utilizado por uma linguagem de alto nível tipo
+Python/Go/Java. Nestes casos, a contagem de referências são feitas ao
+realizar um `=`
+
+```java
+Object obj = new Object(); //aloca
+Object new_ref = obj;      //aumenta em 1 a referência
+```
+
+Uma forma simples de contar as referências é criar uma função:
+
+```c
+void set_ptr(void **ptr, void *object);
+```
+
+Tal função é utilizada para setar as referências e aumentar os
+contadores. 
+
+Em tempo de compilação, o compilador da sua linguagem pode traduzir
+todos os `=` para um `set_ptr`.
+
+### Nome do Executável Final
+
+`garbagec`
