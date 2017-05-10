@@ -145,7 +145,7 @@ são identificados de acordo com os ids anteriores:
 | nops |          |     |
 | 0    | 512      | a   |
 | 1    | 128      | a   |
-| 2    |          | f   |
+| 0    |          | f   |
 | ...  | ...      | ... |
 
 A primeira linha indica o esquema de alocação a ser utilizado. Você deve
@@ -161,7 +161,7 @@ você pode gerenciar os ids das operações. Tal linha é um int. Os ids são
 de [0, nops).
 
 Por fim, entrada acima aloca 2 regiões de memória, uma de 512bytes e outra
-de 128bytes. Após as alocações, a mesma libera 512bytes da região 1. 
+de 128bytes. Após as alocações, a mesma libera 512bytes da região 0. 
 
 As entradas vão ser lidas de `stdin`.
 
@@ -206,9 +206,9 @@ referências entre objetos em C++/Java/Python).
 
 ### Entrada
 
-| ID   | Mem Size | Op  |
-|------|----------|-----|
-| bf   |          |     |
+| ID   | Mem Size | Op  | Comentário
+|------|----------|-----|------------|
+| bf   |          |     | Pode manter para aproveitar código. Não vamos usar
 | nops |          |     |
 | 0    | 512      | a   |
 | 1    | 128      | a   |
