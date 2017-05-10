@@ -42,7 +42,7 @@ Você deve implementar os algoritmos:
   * NRU
   * Aging
 
-## Entrada e saída
+## Entrada
 
 A entrada será composta de arquivos que indicam um endereço virtual de
 memória a ser lido. Além disto, é indicado se a operação é de leitura ou
@@ -56,6 +56,7 @@ escrita.
 
 
 Para o método de saída você deve indicar o número de page-faults do algoritmo.
+As entradas vão ser lidas de `stdin`.
 
 ### Executando o Código
 
@@ -68,7 +69,6 @@ A ser disponibilizado
 ### Recursos Interessantes
 
   * http://www.ntu.edu.sg/home/smitha/ParaCache/Paracache/vm.html
-
 
 ## Parte 2: Malloc!
 
@@ -131,14 +131,52 @@ void *init = sbrk(0);
 
 ### Entrada
 
-A ser disponibilizado
+Sua entrada será uma lista de identificadores e tamanhos. Para cada um destes,
+você deve alocar a memória. Também vamos fazer operações de free. Os free's 
+são identificados de acordo com os ids anteriores:
+
+| ID   | Mem Size | Op  |
+|------|----------|-----|
+| bf   |          |     |
+| 1    | 512      | a   |
+| 2    | 128      | a   |
+| 1    |          | f   |
+| ...  | ...      | ... |
+
+A primeira linha indica o esquema de alocação a ser utilizado. Você deve
+implementar:
+
+  1. Best fit
+  2. Worst fit
+  3. First fit
+  4. Next fit
+
+A entrada acima aloca 2 regiões de memória, uma de 512bytes e outra de
+128bytes. Após isto, a mesma libera 512bytes da região 1. As entradas
+vão ser lidas de `stdin`.
 
 ### Saída
 
-A ser disponibilizado
+Para cada entrada, seu algoritmo deve mensurar a fragmentação, isto é
+a quantidade de espaço livre entre blocos de memória. Caso os allocs
+passem do tamanho máximo de memória, definido no header, seu código
+deve retornar NULL igual a biblioteca malloc.
+
+A saída é mensurada pela fragmentação externa, podendo ser um número
+apenas:
+
+![](http://wikimedia.org/api/rest_v1/media/math/render/svg/718dd9727b3c8db3a8b733a9558608e16fcf5434)
+
+Então, uma saída possível seria:
+
+``0.67``
 
 ### Experimentos
 
 A ser disponibilizado
+
+### Recursos Interessantes
+
+  1. http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf
 
 ## Parte 3 (Extra): Garbage Collection
