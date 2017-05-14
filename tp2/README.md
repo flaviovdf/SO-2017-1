@@ -157,7 +157,7 @@ implementar:
 
 A segunda linha indica o número de operações que serão realizadas, assim você
 pode gerenciar os ids das operações. Tal linha é um int. Os ids são de `[0,
-nops)`.
+nops)` (no pior caso, fazemos nops alocas distintos sem frees).
 
 Por fim, entrada acima aloca 2 regiões de memória, uma de 512bytes e outra de
 128bytes. Após as alocações, a mesma libera 512bytes da região 0.
