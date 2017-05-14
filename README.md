@@ -49,9 +49,9 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 12   | 24/04/17 | Boot + Paginação XV6      | [11-BootXV6]                                           |
 |      | 26/04/17 |                           | Ver tabela anterior                                    |
 |      | 03/05/17 |                           | [TP2]                                                  |
-| 16   | 10/05/17 | Tabelas de Página         |                                                        |
-| 17   | 15/05/17 | Memória Virtual           |                                                        |
-| 18   | 17/05/17 | Memória Virtual           |                                                        |
+| 16   | 10/05/17 | Algoritmos Paginação      |                                                        |
+| 17   | 15/05/17 | Malloc                    |                                                        |
+| 18   | 17/05/17 | Revisão Memória           |                                                        |
 |      | 22/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 19   | 24/05/17 | Entrada e Saída           |                                                        |
 | 20   | 29/05/17 | Entrada e Saída           |                                                        |
