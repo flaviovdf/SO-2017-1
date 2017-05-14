@@ -193,7 +193,7 @@ A ser disponibilizado
 
 ## Parte 3: Garbage Collection
 
-Implemente um coletor de memória simples por contagem de referências.  Não se
+**Simule** um coletor de memória simples por contagem de referências.  Não se
 preocupe com referências cíclicas, não vamos ter casos como esse.  Para
 implementar o GC, você vai ler uma entrada similar a anterior. A mesma terá
 operações novas de dependencias entre ids de alocação (imagine como referências
@@ -204,9 +204,8 @@ entre objetos em C++/Java/Python).
 
 ### Entrada
 
-| ID   | Mem Size | Op  | Comentário
-|------|----------|-----|------------|
-| bf   |          |     | Pode manter para aproveitar código. Não vamos usar
+| ID   | Mem Size | Op  |
+|------|----------|-----|
 | nops |          |     |
 | 0    | 512      | a   |
 | 1    | 128      | a   |
