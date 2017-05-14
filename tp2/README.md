@@ -256,6 +256,18 @@ Tal função é utilizada para setar as referências e aumentar os contadores.
 Em tempo de compilação, o compilador da sua linguagem pode traduzir todos os
 `=` para um `set_ptr`.
 
+Uma outra função:
+
+```c
+void unset_ptr(void **ptr);
+```
+
+Poderia ser utilizada quando se faz `= NULL`. O post abaixo fala um pouco
+de como a contagem é feita em Python:
+
+https://intopython.com/2016/12/13/memory-management/
+
+
 ### Nome do Executável Final
 
 `garbagec`
