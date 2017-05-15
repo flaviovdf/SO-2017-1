@@ -109,7 +109,7 @@ Cada `aloca` deve gerencia a memória livre com uma lista encadeada
 representando espaços contínuos de memória:
 
 ```
-{size, is_free, next} -> {size, is_free, next} -> {size, is_free, next} -> ...
+{size, next} -> {size, next} -> {size, next} -> ...
 ```
 
 As funções não devem chamar `malloc` nem `free`. As mesmas devem fazer uso de
