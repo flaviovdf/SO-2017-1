@@ -87,7 +87,7 @@ Funções a serem implementadas:
 #ifndef SO605_GC
 #define SO605_GC
 
-#define MEMSIZE 4026*1024*1024            //Processo tem 4096 MB de memória
+#define MEMSIZE 4096*1024*1024            //Processo tem 4096 MB de memória
 
 //Nó da lista de memória livre
 typedef struct free_node {
