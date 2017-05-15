@@ -90,15 +90,14 @@ Funções a serem implementadas:
 #define MEMSIZE 4026*1024*1024            //Processo tem 4096 MB de memória
 
 //Nó da lista de memória livre
-typedef struct mem_node {
+typedef struct free_node {
  size_t size;
- int isFree;
  struct mem_node *next;
-} mem_node_t;
+} free_node_t;
 
 //Lista de memória alocada. Ponteira para
 //o início da lista.
-typedef *mem_node_t mem_free_t;
+typedef *free_node_t mem_free_t;
 
 void *aloca(size_t size);
 void libera(void *ptr);
