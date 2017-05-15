@@ -92,7 +92,7 @@ Funções a serem implementadas:
 //Nó da lista de memória livre
 typedef struct free_node {
  size_t size;
- struct mem_node *next;
+ struct free_node *next;
 } free_node_t;
 
 //Lista de memória alocada. Ponteira para
