@@ -19,7 +19,10 @@ de simulação.
 
 ### Código Base
 
+No link abaixo temos um esqueleto do simulador. No mesmo, você precisa
+mudar apenas as políticas de reposição da memória.
 
+https://github.com/flaviovdf/SO-2017-1/blob/master/tp2/esqueletos/vmm.c
 
 ### Exemplos
 
@@ -29,11 +32,11 @@ serão estudadas.
 
 O simulador tem quatro parâmetros:
 
-  * i) o número de páginas da memória virtual;
-  * ii) o número de molduras de páginas da memória física;
-  * iii) o nome do algoritmo de reposição que será usado; e
+  * i) o número de páginas da memória virtual (lido do arquivo de entrada);
+  * ii) o número de molduras de páginas da memória física (lido do arquivo);
+  * iii) o nome do algoritmo de reposição que será usado; e (linha de comando);
   * iv) a frequência em que ocorrerão interrupções de relógio
-        (alguns algoritmos precisam dessa informação).
+        (alguns algoritmos precisam dessa informação) (linha de comando).
 
 Você deve implementar os algoritmos:
 
@@ -47,19 +50,31 @@ Você deve implementar os algoritmos:
 A entrada será composta de arquivos que indicam um endereço virtual de memória
 a ser lido. Além disto, é indicado se a operação é de leitura ou escrita.
 
-| End. | Tipo |
-|------|------|
-| 1726 | r    |
-| 1232 | w    |
-| ...  | ...  |
+| End.        | Tipo |
+|-------------|------|
+| numPáginas  |      |
+| numMolduras |      |
+| 1726        | r    |
+| 1232        | w    |
+| ...         | ...  |
 
 
 Para o método de saída você deve indicar o número de page-faults do algoritmo.
-As entradas vão ser lidas de `stdin`.
+As entradas vão ser lidas de `stdin`. Note que o simulador inicia lendo
+numPáginas. Isso da o tamanho da memória virtual. Depois o mesmo vai ler
+numMolduras, indicando o tamanho da memória física.
+
+Todo endereço lido é um inteiro entre `[0, numPáginas)`. Isto é, não existe
+tradução de endereços no simulador.
 
 ### Executando o Código
 
-Ver o esqueleto!
+```bash
+$ gcc -Wall vmm.c -o vmm
+$ ./vmm random 10 < anomaly.dat
+```
+O exemplo acima roda o simulador com a política random, um clock a cada 10
+instruções, lendo da entdada padrão o `anomaly.dat`.
 
 ### Plotando Resultados
 
@@ -265,7 +280,6 @@ Poderia ser utilizada quando se faz `= NULL`. O post abaixo fala um pouco
 de como a contagem é feita em Python:
 
 https://intopython.com/2016/12/13/memory-management/
-
 
 ### Nome do Executável Final
 
