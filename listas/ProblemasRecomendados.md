@@ -1,6 +1,3 @@
-Processos
-=========
-
 ## Livro Siberschatz (Fundamentos de Sistemas Operacionais)
 
 **9a Edição**
