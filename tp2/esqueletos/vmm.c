@@ -20,7 +20,7 @@
 #define READ 'r'
 #define WRITE 'w'
 
-// Define a função que simula a tabela de páginas
+// Define a função que simula o algoritmo da política de subst.
 typedef int (*eviction_f)(int8_t**, int, int, int);
 
 typedef struct {
@@ -29,7 +29,12 @@ typedef struct {
 } paging_policy_t;
 
 // Codifique as reposições a partir daqui!
-// Cada método abaixo retorna uma página para ser replaced.
+// Cada método abaixo retorna uma página para ser trocada. Note também
+// que cada algoritmo recebe:
+// - A tabela de páginas
+// - O tamanho da mesma
+// - A última página acessada
+// - Se a última instrução gerou um ciclo de clock
 int fifo(int8_t** page_table, int num_pages, int prev_page, int clock) {
   return -1;
 }
@@ -112,7 +117,7 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page,
   page_table_data[PT_FRAMEID] = next_frame_addr;
   page_table_data[PT_MAPPED] = 1;
   page_table_data[PT_REFERENCE_BIT] = 1;
-  page_table_data[PT_REFERENCE_MODE] = (int) access_type;
+  page_table_data[PT_REFERENCE_MODE] = (int8_t) access_type;
   *prev_page = virt_addr;
   return 1; // Page Fault!
 }
@@ -171,9 +176,10 @@ int main(int argc, char **argv) {
     {"aging", *aging},
     {"random", *random_page}
   };
-
+  
+  int n_policies = sizeof(policies) / sizeof(policies[0]);
   eviction_f evict = NULL;
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < n_policies; i++) {
     if (strcmp(policies[i].name, algorithm) == 0) {
       evict = policies[i].function;
       break;
