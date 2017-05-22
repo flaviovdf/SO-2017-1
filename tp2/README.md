@@ -59,7 +59,7 @@ As entradas vão ser lidas de `stdin`.
 
 ### Executando o Código
 
-A ser disponibilizado
+Ver o esqueleto!
 
 ### Plotando Resultados
 
