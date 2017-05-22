@@ -22,7 +22,7 @@ de simulação.
 No link abaixo temos um esqueleto do simulador. No mesmo, você precisa
 mudar apenas as políticas de reposição da memória.
 
-https://github.com/flaviovdf/SO-2017-1/blob/master/tp2/esqueletos/vmm.c
+https://github.com/flaviovdf/SO-2017-1/blob/master/tp2/esqueletos/vmm/
 
 ### Exemplos
 
@@ -154,7 +154,6 @@ são identificados de acordo com os ids anteriores:
 
 | ID   | Mem Size | Op  |
 |------|----------|-----|
-| bf   |          |     |
 | nops |          |     |
 | 0    | 512      | a   |
 | 1    | 128      | a   |
@@ -204,6 +203,19 @@ A ser disponibilizado
 ### Nome do Executável Final
 
 `aloca`
+
+### Executando
+
+Veja o esqueleto no link:
+
+https://github.com/flaviovdf/SO-2017-1/blob/master/tp2/esqueletos/ahloka/
+
+```
+$ ./aloca bf < alocacoes.dat
+0.67
+```
+
+O único parâmetro indica qual algoritmo será utilizado.
 
 ## Parte 3: Garbage Collection
 
