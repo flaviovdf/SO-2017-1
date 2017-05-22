@@ -8,21 +8,22 @@ Aulas: Terças e Quintas (17:00 - 18:40)
 
 Sala: 2014
 
-[Frequência](https://docs.google.com/spreadsheets/d/1HLKp8ExZbFL5IFhegWG0cHBfpHrkYq0c07fOMNdCDbA)
-
 ## TPs
 
   1. [TP1](https://github.com/flaviovdf/SO-2017-1/tree/master/tp1)
   2. [TP2](https://github.com/flaviovdf/SO-2017-1/tree/master/tp2)
+
+## Listas
+
+  1. [Lista01]
+  1. [Lista02]
+  1. [ProblemasRecomendados]
 
 ## Aulas
 
 Slides também podem ser encontrados no [Google Drive](https://drive.google.com/drive/folders/0B0ryAvcYobs0c1oxSU9LaWdFbWs).
 
 **Plano de aulas inicial**
-
-  1. [Lista01]
-  1. [ProblemasRecomendados]
 
 | Aula | Data     |  Prova 1                  | Informações                                            |
 |------|----------|---------------------------|--------------------------------------------------------|
@@ -52,7 +53,7 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 16   | 10/05/17 | Algoritmos Paginação      |                                                        |
 | 17   | 15/05/17 | Malloc                    |                                                        |
 |      | 17/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
-| 18   | 22/05/17 | Revisão Memória           | [Lista2]                                               |
+| 18   | 22/05/17 | Revisão Memória           | [Lista02]                                              |
 | 19   | 24/05/17 | Entrada e Saída           |                                                        |
 | 20   | 29/05/17 | Entrada e Saída           |                                                        |
 | 21   | 31/05/17 | Entrada e Saída           |                                                        |
