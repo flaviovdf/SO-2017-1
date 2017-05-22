@@ -51,8 +51,8 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 |      | 03/05/17 |                           | [TP2]                                                  |
 | 16   | 10/05/17 | Algoritmos Paginação      |                                                        |
 | 17   | 15/05/17 | Malloc                    |                                                        |
-| 18   | 17/05/17 | Revisão Memória           |                                                        |
-|      | 22/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
+|      | 17/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
+| 18   | 22/05/17 | Revisão Memória           | [Lista2]                                               |
 | 19   | 24/05/17 | Entrada e Saída           |                                                        |
 | 20   | 29/05/17 | Entrada e Saída           |                                                        |
 | 21   | 31/05/17 | Entrada e Saída           |                                                        |
@@ -83,6 +83,7 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 [07-Exemplos]: https://github.com/flaviovdf/SO-2017-1/blob/master/examples/problemssync/
 [ProblemasRecomendados]: https://github.com/flaviovdf/SO-2017-1/blob/master/listas/ProblemasRecomendados.md
 [Lista01]: https://github.com/flaviovdf/SO-2017-1/blob/master/listas/Lista1.md
+[Lista02]: https://github.com/flaviovdf/SO-2017-1/blob/master/listas/Lista2.md
 [08-Deadlocks]: ./slides/08-Deadlocks.pdf
 [09-Gerencia]: ./slides/09-Memoria.pdf
 [10-SegmentacaoPaginacao]: ./slides/10-SegmentacaoPaginacao.pdf
