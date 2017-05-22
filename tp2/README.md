@@ -19,7 +19,7 @@ de simulação.
 
 ### Código Base
 
-A ser disponibilizado
+
 
 ### Exemplos
 
@@ -39,8 +39,8 @@ Você deve implementar os algoritmos:
 
   * FIFO
   * Second-Chance
-  * NRU
-  * Aging
+  * LFU
+  * Aging Utilizando 8 bits para contar
 
 ## Entrada
 
