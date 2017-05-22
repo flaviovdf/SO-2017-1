@@ -35,6 +35,9 @@ typedef struct {
 // - O tamanho da mesma
 // - A última página acessada
 // - Se a última instrução gerou um ciclo de clock
+//
+// Adicione mais parâmetros caso ache necessário
+
 int fifo(int8_t** page_table, int num_pages, int prev_page, int clock) {
   return -1;
 }
@@ -176,7 +179,7 @@ int main(int argc, char **argv) {
     {"aging", *aging},
     {"random", *random_page}
   };
-  
+
   int n_policies = sizeof(policies) / sizeof(policies[0]);
   eviction_f evict = NULL;
   for (int i = 0; i < n_policies; i++) {
