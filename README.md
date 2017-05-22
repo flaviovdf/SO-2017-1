@@ -54,14 +54,14 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 17   | 15/05/17 | Malloc                    |                                                        |
 |      | 17/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 18   | 22/05/17 | Revisão Memória           | [Lista02]                                              |
-| 19   | 24/05/17 | Entrada e Saída           |                                                        |
-| 20   | 29/05/17 | Entrada e Saída           |                                                        |
-| 21   | 31/05/17 | Entrada e Saída           |                                                        |
-| 22   | 05/06/17 | Arquivos                  |                                                        |
-| 23   | 07/06/17 | Arquivos                  |                                                        |
-| 24   | 12/06/17 | Proteção                  |                                                        |
-| 25   | 14/06/17 | Segurança                 |                                                        |
-| 26   | 19/06/17 | Virtualização             |                                                        |
+| 19   | 24/05/17 | Arq/Entrada e Saída       |                                                        |
+| 20   | 29/05/17 | Arq/Entrada e Saída       |                                                        |
+| 21   | 31/05/17 | Arq/Entrada e Saída       |                                                        |
+| 22   | 05/06/17 | Proteção+Segurança        |                                                        |
+| 23   | 07/06/17 | ?                         |                                                        |
+| 24   | 12/06/17 | ?                         |                                                        |
+| 25   | 14/06/17 | ?                         |                                                        |
+| 26   | 19/06/17 | Virtualização+Docker      |                                                        |
 | 27   | 21/06/17 | *Dúvidas+Exercícios*      |                                                        |
 | 28   | 26/06/17 | *Prova 2*                 |                                                        |
 | 29   | 28/07/17 | Correção da Prova         |                                                        |
