@@ -29,6 +29,7 @@ typedef struct {
 } paging_policy_t;
 
 // Codifique as reposições a partir daqui!
+// Cada método abaixo retorna uma página para ser replaced.
 int fifo(int8_t** page_table, int num_pages, int prev_page, int clock) {
   return -1;
 }
@@ -79,10 +80,8 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page,
     exit(1);
   }
 
-  int8_t *page_table_data = page_table[virt_addr];
-  int8_t mapped = page_table_data[PT_MAPPED];
-  if (mapped == 1) {
-    page_table_data[PT_REFERENCE_BIT] = 1;
+  if (page_table[virt_addr][PT_MAPPED] == 1) {
+    page_table[virt_addr][PT_REFERENCE_BIT] = 1;
     return 0; // Not Page Fault!
   }
 
@@ -94,6 +93,10 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page,
   } else { // Precisamos liberar a memória!
     assert(*num_free_frames == 0);
     int to_free = evict(page_table, num_pages, *prev_page, clock);
+    assert(to_free >= 0);
+    assert(to_free < num_pages);
+    assert(page_table[to_free][PT_MAPPED] != 0);
+
     next_frame_addr = page_table[to_free][PT_FRAMEID];
 
     // Libera pagina antiga
@@ -105,6 +108,7 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page,
   }
 
   // Coloca endereço físico na tabela de páginas!
+  int8_t *page_table_data = page_table[virt_addr];
   page_table_data[PT_FRAMEID] = next_frame_addr;
   page_table_data[PT_MAPPED] = 1;
   page_table_data[PT_REFERENCE_BIT] = 1;
@@ -126,8 +130,8 @@ void run(int8_t **page_table, int num_pages, int *prev_page,
     scanf("%c", &access_type);
     clock = (i % clock_freq) == 0;
     faults += simulate(page_table, num_pages, prev_page, physical_memory,
-             num_free_frames, num_frames, prev_free, virt_addr, access_type,
-             evict, clock);
+                       num_free_frames, num_frames, prev_free, virt_addr,
+                       access_type, evict, clock);
     i++;
   }
   printf("%d\n", faults);
