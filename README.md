@@ -54,9 +54,9 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 17   | 15/05/17 | Malloc                    |                                                        |
 |      | 17/05/17 |                           | *Atividades Complementares. Sem Aula*                  |
 | 18   | 22/05/17 | Revisão Memória           | [Lista02]                                              |
-| 19   | 24/05/17 | Arq/Entrada e Saída       |                                                        |
-| 20   | 29/05/17 | Arq/Entrada e Saída       |                                                        |
-| 21   | 31/05/17 | Arq/Entrada e Saída       |                                                        |
+| 19   | 24/05/17 | E/S Dispositivos          |                                                        |
+| 20   | 29/05/17 | Arquivos + VFS            |                                                        |
+| 21   | 31/05/17 | VFS + Logs/Journal        |                                                        |
 | 22   | 05/06/17 | Proteção+Segurança        |                                                        |
 | 23   | 07/06/17 | ?                         |                                                        |
 | 24   | 12/06/17 | ?                         |                                                        |
