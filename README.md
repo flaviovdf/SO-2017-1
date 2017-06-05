@@ -59,12 +59,13 @@ Slides também podem ser encontrados no [Google Drive](https://drive.google.com/
 | 21   | 31/05/17 | VFS + Logs/Journal        |                                                        |
 | 22   | 05/06/17 | Proteção+Segurança        |                                                        |
 | 23   | 07/06/17 | Revisão TP2               |                                                        |
-| 24   | 12/06/17 |                           |                                                        |
-| 25   | 14/06/17 |                           |                                                        |
-| 26   | 19/06/17 | Virtualização+Docker      |                                                        |
-| 27   | 21/06/17 | *Dúvidas+Exercícios*      |                                                        |
-| 28   | 26/06/17 | *Prova 2*                 |                                                        |
-| 29   | 28/07/17 | Correção da Prova         |                                                        |
+|      | 12/06/17 |                           |                                                        |
+|      | 14/06/17 |                           |                                                        |
+| 24   | 19/06/17 | Virtualização+Docker      |                                                        |
+| 25   | 21/06/17 | Virtualização+Docker      |                                                        |
+| 26   | 26/06/17 | *Dúvidas+Exercícios*      |                                                        |
+| 27   | 28/06/17 | *Prova 2*                 |                                                        |
+| 28   | 03/07/17 | Correção da Prova         |                                                        |
 
 
 ## Material Interessante na Web
