@@ -18,7 +18,7 @@ def main():
                 if is_top:
                     page_num = random.randint(0, top_20)
                 else:
-                    page_num = random.randint(top_20+1, num_pages)
+                    page_num = random.randint(top_20+1, num_pages-1)
 
                 print(page_num, 'r' if is_read else 'w', file=outfile)
 

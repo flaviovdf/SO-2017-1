@@ -11,7 +11,7 @@ def main():
             print(num_pages, num_frames, file=outfile)
             for i in range(num_refs):
                 is_read = random.randint(0, 1) == 0
-                page_num = random.randint(0, num_pages)
+                page_num = random.randint(0, num_pages-1)
                 print(page_num, 'r' if is_read else 'w', file=outfile)
 
 
