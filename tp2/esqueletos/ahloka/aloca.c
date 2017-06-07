@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
   }
   if (valid == 0) {
     printf("Algoritmo inválido: Usage %s <algorithm>\n", argv[0]);
-    printf("--onde o algoritmo vem da lita: {ff, bf, wf, nf}");
+    printf("--onde o algoritmo vem das opções: {ff, bf, wf, nf}");
     exit(1);
   }
 
