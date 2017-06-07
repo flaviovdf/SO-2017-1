@@ -50,13 +50,12 @@ Você deve implementar os algoritmos:
 A entrada será composta de arquivos que indicam um endereço virtual de memória
 a ser lido. Além disto, é indicado se a operação é de leitura ou escrita.
 
-| End.        | Tipo |
-|-------------|------|
-| numPáginas  |      |
-| numMolduras |      |
-| 1726        | r    |
-| 1232        | w    |
-| ...         | ...  |
+| End.                   | Tipo |
+|------------------------|------|
+| numPáginas numMolduras |      |
+| 1726                   | r    |
+| 1232                   | w    |
+| ...                    | ...  |
 
 
 Para o método de saída você deve indicar o número de page-faults do algoritmo.
@@ -78,7 +77,7 @@ instruções, lendo da entdada padrão o `anomaly.dat`.
 
 ### Plotando Resultados
 
-A ser disponibilizado
+Ver notebook na pasta de exemplos
 
 ### Recursos Interessantes
 
