@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INPUT=nolocality
+INPUT=belady
 CLOCK=1
 
 echo "algorithm,faults,cachesize,clockfreq,input"
