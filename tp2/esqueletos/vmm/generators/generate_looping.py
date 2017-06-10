@@ -7,7 +7,7 @@ def main():
     num_pages = 127
     num_refs = 2000
     for num_frames in range(1, 128):
-        with open('belady_cache_size_%d.dat' % num_frames, 'w') as outfile:
+        with open('looping_cache_size_%d.dat' % num_frames, 'w') as outfile:
             print(num_pages, num_frames, file=outfile)
             page_num = 0
             for i in range(num_refs):
