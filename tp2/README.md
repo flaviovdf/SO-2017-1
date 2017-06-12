@@ -156,8 +156,10 @@ são identificados de acordo com os ids anteriores:
 | nops |          |     |
 | 0    | 512      | a   |
 | 1    | 128      | a   |
-| 0    |          | f   |
+| 0    | -1       | f   |
 | ...  | ...      | ... |
+
+O -1 indica que não é uma operação de alocação. Deve ser ignorado.
 
 A primeira linha indica o esquema de alocação a ser utilizado. Você deve
 implementar:
