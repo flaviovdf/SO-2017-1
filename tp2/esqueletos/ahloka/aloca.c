@@ -50,18 +50,32 @@ int main(int argc, char **argv) {
     exit(1);
   }
 
+  void **variables = (void **) malloc(nops * sizeof(void**));
+  for (int i = 0; i < nops; i++)
+    variables[i] = NULL;
+
   int opid;    // ID da operação
+  int memsize; // Tamanho da alocação
   char optype; // Tipo da operação
+  void *addr;
   while (scanf("%d", &opid) == 1) {
     getchar();
+    scanf("%d", &memsize);
     scanf("%c", &optype);
     if (optype == 'a') {         // Aloca!
-      // ...
+      addr = aloca(memsize);
+      variables[opid] = addr;
     } else if (optype == 'f') {  // Free!
-      // ...
+      addr = variables[opid];
+      free(addr);
     } else {
       printf("Erro na entrada");
       exit(1);
     }
   }
+
+  for (int i = 0; i < nops; i++)
+    if (variables[i] != NULL)
+      free(variables[i]);
+  free(variables);
 }

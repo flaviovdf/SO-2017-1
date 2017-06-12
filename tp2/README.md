@@ -42,7 +42,7 @@ Você deve implementar os algoritmos:
 
   * FIFO
   * Second-Chance
-  * LFU
+  * NRU
   * Aging Utilizando 8 bits para contar
 
 ## Entrada
