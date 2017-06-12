@@ -50,6 +50,8 @@ int main(int argc, char **argv) {
     exit(1);
   }
 
+  // O vetor variables mantem os endereços de ids alocados.
+  // É lido ao executarmos uma operação 'f'
   void **variables = (void **) malloc(nops * sizeof(void**));
   for (int i = 0; i < nops; i++)
     variables[i] = NULL;
