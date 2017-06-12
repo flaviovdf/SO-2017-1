@@ -10,12 +10,13 @@
 #include <time.h>
 
 // Campos da tabela de páginas
-#define PT_FIELDS 5           // 4 campos na tabela
+#define PT_FIELDS 6           // 4 campos na tabela
 #define PT_FRAMEID 0          // Endereço da memória física
-#define PT_MAPPED 1           // Endereço presente na tabela (dirty)
-#define PT_REFERENCE_BIT 2    // Bit de referencia
-#define PT_REFERENCE_MODE 3   // Tipo de acesso, converter para char
-#define PT_AGING_COUNTER 4    // Contador para aging
+#define PT_MAPPED 1           // Endereço presente na tabela
+#define PT_DIRTY 2            // Página dirty
+#define PT_REFERENCE_BIT 3    // Bit de referencia
+#define PT_REFERENCE_MODE 4   // Tipo de acesso, converter para char
+#define PT_AGING_COUNTER 5    // Contador para aging
 
 // Tipos de acesso
 #define READ 'r'
@@ -51,7 +52,7 @@ int second_chance(int8_t** page_table, int num_pages, int prev_page,
   return -1;
 }
 
-int lfu(int8_t** page_table, int num_pages, int prev_page,
+int nru(int8_t** page_table, int num_pages, int prev_page,
         int fifo_frm, int num_frames, int clock) {
   return -1;
 }
@@ -120,6 +121,7 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page, int *fifo_frm,
     // Libera pagina antiga
     page_table[to_free][PT_FRAMEID] = -1;
     page_table[to_free][PT_MAPPED] = 0;
+    page_table[to_free][PT_DIRTY] = 0;
     page_table[to_free][PT_REFERENCE_BIT] = 0;
     page_table[to_free][PT_REFERENCE_MODE] = 0;
     page_table[to_free][PT_AGING_COUNTER] = 0;
@@ -129,9 +131,18 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page, int *fifo_frm,
   int8_t *page_table_data = page_table[virt_addr];
   page_table_data[PT_FRAMEID] = next_frame_addr;
   page_table_data[PT_MAPPED] = 1;
+  if (access_type == WRITE) {
+    page_table_data[PT_DIRTY] = 1;
+  }
   page_table_data[PT_REFERENCE_BIT] = 1;
   page_table_data[PT_REFERENCE_MODE] = (int8_t) access_type;
   *prev_page = virt_addr;
+
+  if (clock == 1) {
+    for (int i = 0; i < num_pages; i++)
+      page_table[i][PT_REFERENCE_BIT] = 0;
+  }
+
   return 1; // Page Fault!
 }
 
@@ -185,7 +196,7 @@ int main(int argc, char **argv) {
   paging_policy_t policies[] = {
     {"fifo", *fifo},
     {"second_chance", *second_chance},
-    {"lfu", *lfu},
+    {"nru", *nru},
     {"aging", *aging},
     {"random", *random_page}
   };
@@ -210,6 +221,7 @@ int main(int argc, char **argv) {
     page_table[i] = (int8_t *) malloc(PT_FIELDS * sizeof(int8_t));
     page_table[i][PT_FRAMEID] = -1;
     page_table[i][PT_MAPPED] = 0;
+    page_table[i][PT_DIRTY] = 0;
     page_table[i][PT_REFERENCE_BIT] = 0;
     page_table[i][PT_REFERENCE_MODE] = 0;
     page_table[i][PT_AGING_COUNTER] = 0;
