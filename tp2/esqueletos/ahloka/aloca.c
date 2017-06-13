@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
       variables[opid] = addr;
     } else if (optype == 'f') {  // Free!
       addr = variables[opid];
-      free(addr);
+      libera(addr);
     } else {
       printf("Erro na entrada");
       exit(1);
