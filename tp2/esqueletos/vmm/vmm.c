@@ -157,7 +157,7 @@ void run(int8_t **page_table, int num_pages, int *prev_page, int *fifo_frm,
   while (scanf("%d", &virt_addr) == 1) {
     getchar();
     scanf("%c", &access_type);
-    clock = (i % clock_freq) == 0;
+    clock = ((i+1) % clock_freq) == 0;
     faults += simulate(page_table, num_pages, prev_page, fifo_frm,
                        physical_memory, num_free_frames, num_frames, prev_free,
                        virt_addr, access_type, evict, clock);
