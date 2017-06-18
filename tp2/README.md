@@ -101,17 +101,21 @@ Funções a serem implementadas:
 #ifndef SO605_GC
 #define SO605_GC
 
-#define MEMSIZE 4096*1024*1024            //Processo tem 4096 MB de memória
+// 4096*1024
+// Processo tem 4096 MB de memória
+#define MEMSIZE 4194304
 
 //Nó da lista de memória livre
 typedef struct free_node {
+ size_t free;
  size_t size;
  struct free_node *next;
 } free_node_t;
 
-//Lista de memória alocada. Ponteira para
-//o início da lista.
-typedef *free_node_t mem_free_t;
+typedef struct {
+  free_node_t *head;
+  free_node_t *lastAlloca; // Usado para next fit
+} free_list_t;
 
 void *aloca(size_t size);
 void libera(void *ptr);
@@ -126,8 +130,7 @@ representando espaços contínuos de memória:
 {size, next} -> {size, next} -> {size, next} -> ...
 ```
 
-As funções não devem chamar `malloc` nem `free`. As mesmas devem fazer uso de
-`mmap` (Caso de aloca) e `munmap` (Caso de free).
+As funções não devem chamar `malloc` nem `free`.
 
 ```c
 //Alocando memória com mmap
@@ -144,6 +147,19 @@ memória:
 ```c
 void *init = sbrk(0);
 ```
+
+Ou simplesmente passando `NULL` para o init.
+```c
+mmap(NULL, len, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+```
+
+Existem duas abordagem para fazer o TP.
+  1. Pre alocar os 4mb em 1 único mmap e seguir daí
+  2. Ir alocando com mmap a cada aloca e munmap a cada libera.
+
+A primeira é melhor pois é determinística. Note na documentação do `mmap` que
+o mesmo não garante que vai utilizar a posição `init`. Se no seu TP você não
+usar nenhuma outra primitiva de alocação (o malloc do c), deveria funcionar.
 
 ### Entrada
 
