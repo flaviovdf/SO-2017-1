@@ -10,4 +10,6 @@
 
 # Casos sem resposta fixa
 
-
+Para os casos random não teremos resposta fixa. Sabemos que o WF vai ser
+pior. O BF, NF e FF devem ter resultados similares. O BF e FF devem ficar
+com o código mais lento.
