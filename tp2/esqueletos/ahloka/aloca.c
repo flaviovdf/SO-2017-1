@@ -25,9 +25,9 @@ free_list_t *HEAP = NULL;
 void *alwaysGrow(size_t size) {
   assert(HEAP->lastAlloca != NULL);
   free_node_t *lastAlloca = HEAP->lastAlloca;
-  printf("Ulitmo free %lu\n", lastAlloca->free);
+  printf("Ultimo free %lu\n", lastAlloca->free);
   // Temos espaço para alocar + o espaço da lista?
-  if (lastAlloca->free - sizeof(free_node_t) < size) {
+  if (lastAlloca->free < sizeof(free_node_t) + size) {
     return NULL;
   }
   // Sim!
