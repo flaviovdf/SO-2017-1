@@ -247,16 +247,16 @@ entre objetos em C++/Java/Python).
 
 ### Entrada
 
-| ID   | Mem Size | Op  |
-|------|----------|-----|
-| nops |          |     |
-| 0    | 512      | a   |
-| 1    | 128      | a   |
-| 2    |          | f   |
-| 3    | 0        | r   |
-| 4    | 3        | r   |
-| 4    |          | f   |
-| ...  | ...      | ... |
+| ID   | Mem Size/Ref | Op  |
+|------|--------------|-----|
+| nops |              |     |
+| 0    | 512          | a   |
+| 1    | 128          | a   |
+| 2    | -1           | f   |
+| 3    | 0            | r   |
+| 4    | 3            | r   |
+| 4    | -1           | f   |
+| ...  | ...          | ... |
 
 As operações de referência são identificadas por `r`.
 
