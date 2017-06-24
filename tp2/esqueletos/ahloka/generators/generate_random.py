@@ -5,7 +5,7 @@ import random
 
 TOTAL = 4194304
 HEADER = 16
-NODE = 24
+NODE = 32
 
 
 def main():
@@ -27,7 +27,7 @@ def main():
     idxs = [i for i in range(len(ops))]
     random.shuffle(idxs)
 
-    p = 0.9
+    p = 0.5
     prev = []
     for i, s in enumerate(ops):
         prev.append(i)

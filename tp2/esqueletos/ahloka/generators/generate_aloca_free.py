@@ -5,7 +5,7 @@ import random
 
 TOTAL = 4194304
 HEADER = 16
-NODE = 24
+NODE = 32
 
 
 def main():
