@@ -74,7 +74,8 @@
 1. [Siberschatz 9.1 - Resumida] Quando ocorrem os erros/faltas de pagina?
    Quais são os passos do SO para tratar as mesmas?
 
-1. [Siberschatz 9.7]
+1. [Siberschatz 9.7] Considere o array bidimensional `A`:
+   `int A[][] = new int[100][100]`.
 
 1. [Siberschatz 9.10 - Alterada] Em um algoritmo ótimo pode ocorrer a anomalia
    de belady? Explique.
@@ -114,3 +115,69 @@
     1. LRU
     1. Segunda chance?
 
+
+## Entrada e Saída
+
+1. Existem cenários onde o POOLING é útil? Explique quais.
+
+1. [Silberschatz 13.5] Como DMA aumenta a concorrência no sistema? Como
+   ele complica o projeto de hardware?
+
+1. [Silberschatz 13.9] 
+
+1. [Silberschatz 13.12] 
+
+## Discos
+
+1. Geralmente o scheduling do disco é jogado com tarefa do SO. Você
+   consegue explicar os motivos?
+
+1. [Siberschatz 10.1] O scheduling de disco, com execução de FCFS, é
+   útil em um ambiente monousuário? Explique sua resposta.
+
+1. [Silberschats 10.2] Explique por que o SSTF tende a favorecer o
+   o "meio do disco".
+   
+1. Explique o motivo pelo qual FCFS é o único algoritmo justo de
+   disco.
+   
+## Arquivos
+
+1. Dê exemplos de aplicaçes que fazem uso de acesso sequencial.
+   E de acesso randômico?
+
+1. Faz sentido o SO ter um cache dos últimos arquivos abertos?
+   Isto é, um cache de inodes->dados.
+
+1. [Silberschatz 11.14] Se o sistema operacional souber que
+   determinada aplicaço vai fazer uso dos dados de um arquivo,
+   domo tal informação pode ser explorada por desempenho?
+   
+1. Discuta e compara hard links e soft links em quesitos de
+   vantagens e desvantagem.
+  
+## Sistema de Arquivos
+
+1. [Siberschatz 12.2] Qual são os motivos de manter o mapa de
+   bits do sistema de arquivos no disco e não na memória?
+   
+1. [Silberschatz 12.6] Como os caches ajudam a melhora o desempenho?
+   Por que sistemas não usam caches maiores ou em maior número?
+   
+1. Explique como funciona uma camada de arquivos virtual.
+
+1. Explique qual o motivo de se utilizar inodes. Quais informações
+   guardamos em iNodes geralmente?
+   
+1. Explique quais são as vantagens de inodes indireto.
+
+1. Pensando em um disco em cilindro, como você faria a alocação de
+   diretórios para ter um melhor desempenho? Como lidar com arquivos
+   grandes.
+  
+1. [Silberschatz 12.13 - Inspirada] Similar à memória principal,
+   sistemas de arquivos tem que escolher um tamanho de bloco. Quais
+   são as vantagens e desvantagens de um tamanho de bloco maior ou
+   menor. Existem vantagens e ter 2 tamanhos para um mesmo sistema
+   de arquivos?
+   
