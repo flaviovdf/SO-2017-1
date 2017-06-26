@@ -229,3 +229,7 @@
    menor. Existem vantagens e ter 2 tamanhos para um mesmo sistema
    de arquivos?
    
+## Proteção e Segurança
+
+São poucos problemas de proteção e segurança no livro, deem uma olhada
+neles.
