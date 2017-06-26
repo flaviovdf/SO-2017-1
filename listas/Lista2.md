@@ -74,9 +74,23 @@
 1. [Siberschatz 9.1 - Resumida] Quando ocorrem os erros/faltas de pagina?
    Quais são os passos do SO para tratar as mesmas?
 
-1. [Siberschatz 9.7] Considere o array bidimensional `A`:
-   `int A[][] = new int[100][100]`.
-
+1. [Siberschatz 9.7 - Alterada] Considere o array bidimensional `A`:
+   `int A[][] = new int[100][100]`, O programa inteiro que processa a matriz
+   reside na página 0. Com 3 quadros de memória real e assumindo que cada linha
+   da matriz cabe em 1 página, quantas faltas ocorrem ao ler a matriz das
+   seguintes forma em um acesso FIFO:
+   ```c
+   for (int i = 0; i < 100; i++)
+       for (int j = 0; j < 100; j++)
+           // Lê A[i][j]
+   ```
+   ```c
+   for (int j = 0; j < 100; j++)
+       for (int i = 0; i < 100; i++)
+           // Lê A[i][j]
+   ```
+   Asssumo que apenas o quadro 0 está ocupado com a página 0, que  o programa.
+   
 1. [Siberschatz 9.10 - Alterada] Em um algoritmo ótimo pode ocorrer a anomalia
    de belady? Explique.
 
@@ -115,6 +129,13 @@
     1. LRU
     1. Segunda chance?
 
+1. [Silberschatz 9.14] Suponha que um programa tenha acabado de referenciar um
+   endereço na memória virtual. Descreve se e qual o morivo de cada cenário
+   ocorrer:
+   a. Falta na TLB sem falta na tabela de páginas.
+   b. Falta na TLB com falta na tabela de páginas.
+   c. Sucesso na TLB sem falta de página na tabela.
+   d. Sucesso na TLB com falta de página na tabela.
 
 ## Entrada e Saída
 
@@ -123,9 +144,15 @@
 1. [Silberschatz 13.5] Como DMA aumenta a concorrência no sistema? Como
    ele complica o projeto de hardware?
 
-1. [Silberschatz 13.9] 
+1. [Silberschatz 13.9 - Alterada] Quais as vantagens de registradores de
+   controle de dispositivos?
+   
+1. Faz sentido um dispositivo que tem controle com base em registradores
+   e não faz uso de DMA?
 
-1. [Silberschatz 13.12] 
+1. [Silberschatz 13.12] Quais são os overheads de atender uma interupção?
+
+1. Existem algum momento que é melhor usar I/O com pooling?
 
 ## Discos
 
@@ -157,6 +184,27 @@
    vantagens e desvantagem.
   
 ## Sistema de Arquivos
+
+1. [Tanenbaum 5.1 - Inspirada] Existem vantagens em identificar arquivos
+   executáveis com um número mágico fixo? Quais as desvantagens?
+   
+1. [Tanenbaum 5.3 - Inspirada] É possível ter um SO que permite
+   ler e escrever de arquivos sem uma chamada `open` (isto é, fazer um
+   `read` direto), quais são as vantagens e desvantagens de tal
+   abordagem?
+
+1. [Tanenbaum 5.6 - Inspirada] Bole um mecanismo de comunicação entre
+   processos utilizando `mmaps`. Você precisa mapear o arquivo inteiro
+   em cada processo?
+   
+1. [Tanenbaum 5.11]
+
+1. Quais são as vantagens e desvantagens de guardar i-nodes perto dos
+   arquivos?
+
+1. [Tanenbaum 5.33] Considerando um sistema de arquivos estilo FFS,
+   no pior caso, quantas operaçes de ler i-nodes são necessárias
+   para ler `/home/user/cursos/so/tp2.c`.
 
 1. [Siberschatz 12.2] Qual são os motivos de manter o mapa de
    bits do sistema de arquivos no disco e não na memória?
