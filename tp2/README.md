@@ -252,10 +252,12 @@ entre objetos em C++/Java/Python).
 | nops |              |     |
 | 0    | 512          | a   |
 | 1    | 128          | a   |
-| 2    | -1           | f   |
+| 2    | 64           | a   |
 | 3    | 0            | r   |
 | 4    | 3            | r   |
 | 4    | -1           | f   |
+| 0    | -1           | f   |
+| 3    | -1           | f   |
 | ...  | ...          | ... |
 
 As operações de referência são identificadas por `r`.
@@ -275,7 +277,7 @@ para 3. Note que 3 nunca foi alocado por `a`, então neste momento seu contador
    2. Indique a quantidade de bytes ainda residentes na memória no fim do
       do seu programa.
 
-Ex: `128`
+Ex: `192` (sem contar os ponteiros)
 
 ### Dicas
 
